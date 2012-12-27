@@ -16,9 +16,9 @@ In `_config.yml` remember to specify your own data:
     title : Rplus Blog @ Github
 
     author :
-      name : Rplus
+      name  : Rplus
       email : Rplus.tw@gmail.com
-      github : Rplus
+      github: Rplus
 
 The theme should reference these variables whenever needed.
 
