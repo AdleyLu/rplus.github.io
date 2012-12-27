@@ -12,17 +12,16 @@ Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllb
 ## Update Author Attributes
 
 In `_config.yml` remember to specify your own data:
-    
-    title : My Blog =)
-    
+
+    title : Rplus Blog @ Github
+
     author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
+      name : Rplus
+      email : Rplus.tw@gmail.com
+      github : Rplus
 
 The theme should reference these variables whenever needed.
-    
+
 ## Sample Posts
 
 This blog contains sample posts which help stage pages and blog data.
