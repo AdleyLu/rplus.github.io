@@ -8,3 +8,5 @@ tags : [tech-post, collection]
 <http://www.balsamiq.com/>  
 非首頁的logo提示很有趣  
 有空來實作一下~ :)
+
+        `css: transition`
