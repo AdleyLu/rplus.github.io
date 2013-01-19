@@ -2,7 +2,7 @@
 layout: post
 category : lessons
 tags : [tech-post, collection]
-tagline: 我遲到了 orz
+tagline: i'm late orz
 ---
 {% include JB/setup %}
 
