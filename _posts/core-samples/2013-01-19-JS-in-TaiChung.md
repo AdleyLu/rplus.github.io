@@ -2,8 +2,8 @@
 layout: post
 category : lessons
 title: wow
+tagline: www
 tags : [tech-post, collection]
-tagline: i'm late orz
 ---
 {% include JB/setup %}
 
