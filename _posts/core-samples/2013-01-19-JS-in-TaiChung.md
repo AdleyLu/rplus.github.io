@@ -1,6 +1,7 @@
 ---
 layout: post
 category : lessons
+title: wow
 tags : [tech-post, collection]
 tagline: i'm late orz
 ---
