@@ -1,7 +1,7 @@
 ---
 layout: post
 category : lessons
-tagline: www
+tagline: I'm late orz...
 tags : [tech-post, collection]
 ---
 {% include JB/setup %}
