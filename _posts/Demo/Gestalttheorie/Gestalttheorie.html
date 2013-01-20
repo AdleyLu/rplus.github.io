@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>完形</title>
+<style>
+body{
+    text-align:center;
+}
+.wrapper{
+    background:url('12s2t.png') center 20px no-repeat fixed;
+    width: 100%;
+    overflow-x:scroll;
+}
+.filter{
+    background:url('bg-10-1.png') 0px 0px repeat;
+    width: 1500px;
+    height: 600px;
+}
+#speed{
+    width:50px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="filter"></div>
+</div>
+
+<input type="button" id="tleft" title="-1" value="◄" />
+<input type="button" id="tpause" title="stop" value="∥" />
+<input type="button" id="tright" title="+1" value="►" /> <br>
+speed up
+<input type="button" id="tfast" title="-10" value="▲" />
+<input type="test" readonly id="speed" value="" />(/s)
+<input type="button" id="tslow" title="+10" value="▼" />
+slow down
+<br>
+<input type="range" id="slidebar" min="1" max="100" value="50" />
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+$(function() {
+
+    var filter = $('.filter'),
+        filterBG = filter.css('background-position').split(/\s/);
+        bgPX =  parseFloat( filterBG[0] ),
+        intval = '',
+        dir = '',
+        slidebar = $('#slidebar');
+        maxSpeed = slidebar.prop('max') *1,
+        minSpeed = slidebar.prop('min') *1,
+        turnSpeed = slidebar.val()*1;
+
+    var startRun = function(val){
+            if( intval == ''){
+                intval = window.setInterval( RunRunRun, turnSpeed);
+            }else if(dir != val){
+                stopRun();
+                startRun();
+            }
+        },
+        stopRun = function(){
+            window.clearInterval(intval);
+            intval = '';
+        },
+        RunRunRun = function(){
+            bgPX += dir;
+            filter.css( 'background-position', bgPX + 'px ' + filterBG[1]);
+        },
+        nowSpped = function(){
+            $('#speed').val( '1/'+turnSpeed );
+        };
+
+    nowSpped();
+
+    $('#tleft, #tright').on('click', function(){
+        var trunDir = parseInt( $(this).prop('title') );
+        startRun(trunDir);
+        dir = trunDir;
+    });
+    $('#tpause').on('click', function(){
+        stopRun();
+    });
+    $('#tfast, #tslow').on('click', function() {
+        turnSpeed = Math.min(maxSpeed, Math.max( minSpeed, turnSpeed + parseInt( $(this).prop('title') ) ));
+        nowSpped();
+        slidebar.val(turnSpeed);
+        if (intval != '') {
+            stopRun();
+            startRun();
+        };
+    });
+
+    slidebar.on('change', function(){
+        turnSpeed = parseInt($(this).val());
+        nowSpped();
+        if (intval != '') {
+            stopRun();
+            startRun();
+        };
+    });
+});
+</script>
+</html>
