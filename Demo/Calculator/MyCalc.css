@@ -1,0 +1,284 @@
+@charset 'utf-8';
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
+@font-face{
+	font-family:'stopWatchFont';
+	src:url('digital-7 (mono).eot');
+	src:url('digital-7 (mono).TTF');
+}
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,select,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,button,caption,cite,code,dfn,em,input,optgroup,option,select,strong,textarea,th,var{font:inherit}del,ins{text-decoration:none}li{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:baseline}sub{vertical-align:baseline}legend{color:#000}
+/**/
+html{
+	background-color: #CFC;
+}
+#calcInput{
+	text-align:right;
+}
+#calculatorDiv{
+	width:12em;
+	position:absolute;
+	padding:0px 10px 30px;
+	background-color:#FFC;
+}
+#calculatorDiv strong{
+	font-family:sans-serif;
+	background-color:#CCF;
+	display:block;
+	text-align:center;
+	padding:5px 0;
+}
+#formulaArea{
+	/*border:1px solid red;*/
+	/*width:11em;*/
+	width:170px;
+}
+.ui-icon-closethick,
+#closeCalcDiv{
+	color:#F00;
+	background-color:#000;
+	display:inline-block;
+	width:1.2em;
+	height:1.2em;
+	text-align:center;
+	border-radius:1em;
+	cursor:pointer;
+	font-family:Arial;
+	font-weight:800;
+	position:absolute;
+	right:-.7em;
+	top:0.5em;
+}
+
+.ui-icon-closethick:hover,
+#closeCalcDiv:hover{
+	background-color:#F00;
+	color:#000;
+	border:2px #000;
+}
+
+/* ------pure--------------------  */
+.pure-row .m{
+	display:inline-block;
+	width:22%;
+	border:1px solid red;
+	text-align:center;
+	height:1.5em;
+	line-height:1.5em;
+	vertical-align: top;
+	cursor:pointer;
+}
+.pure-row .empty{
+	border-color:transparent;
+}
+/* ---- normal warn box ---- */
+.ui-dialog{
+	max-width:180px;
+}
+.ui-icon-closethick{
+	right:-.5em;
+	top:.5em;
+}
+.warn{
+	display:none;
+	text-align:center;
+}
+.warn.wrongFormat{
+	display:block;
+	background-color:silver;
+}
+.wrongFormatMSGsub span{
+	display:block;
+}
+/* ------------- hexagonStyle ------------------*/
+/* -------warn box------------------ */
+.warn.wrongFormat.hexwarn{
+	background-color:#000;
+	color:#F00;
+	font:normal bolder 1em/1 "Times New Roman" serif;
+	box-shadow:0 0 0 1px #000,0 0 15px 5px #FC0;
+}
+.hexwarn .wrongFormatMSG{
+	font-size:5em;
+	padding-bottom:5px;
+}
+.hexwarn .wrongFormatMSGsub{
+	font-size:1.5em;
+	line-height:1.2;
+	border:2px solid red;
+	margin:3px 5px;
+}
+.hexwarn .wrongFormatMSGsub span{
+	font-size:.6em;
+	text-transform:capitalize;
+}
+.warn.hexwarn .b,.warn .t{
+	height:25px;
+}
+.warn.hexwarn .b b,
+.warn.hexwarn .t b{
+	display:inline-block;
+}
+.warn.hexwarn b:nth-child(even){
+	border-left:10px solid #FD0;
+	border-bottom:25px solid #000;
+}
+.warn.hexwarn b:nth-child(odd){
+	border-left:10px solid #000;
+	border-bottom:25px solid #FD0;
+}
+.warn.wrongFormat.hexwarn b{
+	-webkit-animation-duration: .75s;
+	-webkit-animation-delay:0s;
+	-webkit-animation-fill-mode:both;
+	-webkit-animation-iteration-count:infinite;
+}
+.warn.wrongFormat.hexwarn b:nth-child(odd){
+	-webkit-animation-name: b-odd-color;
+}
+.warn.wrongFormat.hexwarn b:nth-child(even){
+	-webkit-animation-name: b-even-color;
+}
+@-webkit-keyframes b-odd-color {
+	0% { border-bottom-color:#F00;}
+	50% { border-bottom-color:#FF0;}
+}
+@-webkit-keyframes b-even-color {
+	0% { border-left-color:#F00;}
+	50% { border-left-color:#FF0;}
+}
+/*--------------------------------------*/
+.hexagonStyle #formulaArea{
+	background-color:#000;
+	border:none;
+	box-shadow:-2px 0 5px 3px #C50;
+	border-right-color:#000;
+	height:33px;
+	color:#FF0;
+	font-family:'stopWatchFont';
+	font-size:1.5em;
+	margin-top:10px;
+	outline:0;
+}
+.hexagonStyle #closeCalcDiv{
+	position:static;
+	text-indent:-17px;
+	width:0px;
+	height:23px;
+	border-radius:0;
+	background-color:transparent;
+	vertical-align:bottom;
+	border-top:10px solid transparent;
+	border-left:17px solid #000;
+}
+#closeCalcDiv:hover{
+	border-left-color:#F00;
+}
+#calculatorDiv.hexagonStyle{
+	background-color:#D00;
+	box-shadow:inset 0 0 90px 5px #000,0 0 3px 1px #000;
+}
+#calculatorDiv.hexagonStyle strong{
+	background-color:#F00;
+	opacity:0;
+	width:70%;
+	margin:0 auto;
+}
+#calculatorDiv.hexagonStyle:hover strong{
+	opacity:0.8;
+	background-color:rgba(255,0,0,.4);
+}
+/*--------------------------------------------*/
+.beehive{
+	width:100%;
+	padding-top:8px;
+}
+.hex {
+	/*http://jtauber.github.com/articles/css-hexagon.html*/
+	float: left;
+	margin-right: -10px;
+	margin-bottom: -19px;
+	font-weight: 900;
+	font-family:stopWatchFont;
+	font-size:2em;
+	color:#F00;
+}
+.hex .l{
+	float: left;
+	width: 0;
+	border-right: 11.5px solid #000;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+}
+.hex .m{
+	float: left;
+	width: 23px;
+	height: 40px;
+	line-height: 40px;
+	background: #000;
+	text-align:center;
+	cursor:pointer;
+}
+.hex .r{
+	float: left;
+	width: 0;
+	border-left: 11.55px solid #000;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+}
+.hex:hover .m{
+	background: #F00;
+	color:#000;
+}
+.hex:hover .l{
+	border-right-color:#F00;
+}
+.hex:hover .r{
+	border-left-color:#F00;
+}
+.hex-row{
+	clear: left;
+}
+.hex-row .hex:nth-child(even){
+	margin-top: 21px;
+}
+.o-o .operator{
+	background-color:#300;
+}
+.o-o .l{
+	border-right-color:#300;
+}
+.o-o .r{
+	border-left-color:#300;
+}
+.erase,
+.backspace{
+	color:#F88;
+}
+.hex.empty .m{
+	background-color:#600;
+	cursor:default;
+	opacity:0.5;
+	-moz-opacity:0.5;
+	filter:alpha(opacity=5);
+}
+.hex.empty .l{
+	border-right-color:#600;
+	cursor:default;
+	opacity:0.5;
+	-moz-opacity:0.5;
+	filter:alpha(opacity=5);
+}
+.hex.empty .r{
+	border-left-color:#600;
+	cursor:default;
+	opacity:0.5;
+	-moz-opacity:0.5;
+	filter:alpha(opacity=5);
+}
+.ui-dialog-titlebar{
+	cursor:move;
+}
