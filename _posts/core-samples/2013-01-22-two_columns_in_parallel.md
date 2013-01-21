@@ -16,7 +16,6 @@ tags : [tech-post, demo, csss]
 
 
 ### Demo @ [Codepen](http://codepen.io/Rplus/pen/mxFaA)
-<script async src="http://codepen.io/assets/embed/ei.js"></script>
-<pre class="codepen" data-height="300" data-type="result" data-href="mxFaA" data-user="Rplus" data-safe="false"><code></code><a href="http://codepen.io/Rplus/pen/mxFaA">Check out this Pen!</a></pre>
+<iframe src="http://codepen.io/Rplus/pen/mxFaA">
 
 ### ref: http://www.facebook.com/ 的留言框
