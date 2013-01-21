@@ -1,18 +1,14 @@
 ﻿---
 layout: post
 category : lessons
-tagline: demo
-tags : [tech-post, demo, csss]
+tags : [tech-post, collection]
 ---
 {% include JB/setup %}
 
-## case:
-圖片文字兩欄並列(非文繞圖)
+<http://www.balsamiq.com/>  
+非首頁的logo提示很有趣  
+有空來實作一下~ :)
 
-### sulotion:
-原本單純的文繞圖(float)，於文字區加一css規則 `overflow:hidden;` 即可解決
+        css: transition
 
-
-### Demo @ [Codepen](http://codepen.io/Rplus/pen/mxFaA)
-
-### ref: http://www.facebook.com/ 的留言框
+ps: 這網站提供的軟體也是做mockup很有用的軟體
