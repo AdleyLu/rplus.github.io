@@ -1,6 +1,6 @@
 ---
 layout: post
-category : lessons
+category : Demo
 tagline: demo
 tags : [tech-post, demo, css]
 ---
@@ -11,7 +11,6 @@ tags : [tech-post, demo, css]
 
 ### sulotion:
 原本單純的文繞圖(float)，於文字區加一css規則 `overflow:hidden;` 即可解決
-
 
 ### Demo @ [Codepen](http://codepen.io/Rplus/pen/mxFaA)
 
