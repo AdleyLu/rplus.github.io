@@ -1,12 +1,10 @@
 ﻿---
 layout: post
 category : lessons
-tagline: []
+tagline: demo
 tags : [tech-post, demo, csss]
 ---
 {% include JB/setup %}
-
----
 
 ## case:
 圖片文字兩欄並列(非文繞圖)
