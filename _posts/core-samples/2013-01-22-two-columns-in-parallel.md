@@ -2,7 +2,7 @@
 layout: post
 category : Demo
 tagline: demo
-tags : [tech-post, demo, css, F2E]
+tags : [tech-post, demo, css, F2E, codepen]
 ---
 {% include JB/setup %}
 

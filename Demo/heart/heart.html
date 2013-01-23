@@ -4,13 +4,27 @@
 <meta charset="UTF-8">
 <title></title>
 <style>
+body{
+    background-color:#CCC;
+}
 img{
     background-color:#666;
-    -webkit-transition:background-color 1s;
-    transition:all 1s;
+    border-radius:70px;
+    box-shadow: inset  5px 10px 10px 0px rgba(255,255,255,.6),
+                      10px 10px 20px 0px rgba(0,0,0,.6),
+                       0px 10px 10px 0px rgba(0,0,0,.6);
+    -webkit-transition:all .5s;
+    transition:all .5s;
+    cursor:pointer;
 }
 img:hover{
-    background-color:#900;
+    background-color:#700;
+}
+img:active{
+    background-color:#A00;
+    box-shadow: inset 10px 10px 10px 0px rgba(0,0,0, 1),
+                      12px 10px 20px 0px rgba(0,0,0,.6),
+                       0px 10px 10px 0px rgba(0,0,0,.6);
 }
 </style>
 </head>
