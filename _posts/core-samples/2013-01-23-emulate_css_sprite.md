@@ -40,7 +40,7 @@ css sprite 的缺點大概就是圖都兜在了一起
 而且初始就要想一堆這圖片要怎麼弄怎麼調的，實在也是搞肛啦~  
 不過以實驗來說，是還蠻好玩的啦XDD
 
-<img src="http://rplus.github.com/Demo/2013/01/23/emulate_css_sprite/" alt="heart" id="IMG_heart" />
+<img src="http://rplus.github.com/Demo/heart/heart_v2.png" alt="heart" id="IMG_heart" />
 
 <style>
 body{
