@@ -5,7 +5,7 @@ tagline: 另個角度模擬css sprite
 tags : [demo, css, F2E, css sprite, InkScape]
 ---
 {% include JB/setup %}
-
+<meta property="og:image" content="http://rplus.github.com/Demo/heart/heart_v2.png" />
 ###[CSS Sprite](https://www.google.com.tw/search?q=CSS+Sprite):
 這個效果其實個人還蠻喜歡用的  
 除了減少 request 次數，讓網頁似乎可以載入快些外  
