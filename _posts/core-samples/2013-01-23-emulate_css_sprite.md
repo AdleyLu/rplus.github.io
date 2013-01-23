@@ -42,4 +42,5 @@ css sprite 的缺點大概就是圖都兜在了一起
 不過以實驗來說，是還蠻好玩的啦XDD
 
 
-Demo: <http://rplus.github.com/Demo/heart/heart.html>
+###Demo:
+<http://rplus.github.com/Demo/heart/heart.html>
