@@ -40,7 +40,7 @@ css sprite 的缺點大概就是圖都兜在了一起
 而且初始就要想一堆這圖片要怎麼弄怎麼調的，實在也是搞肛啦~  
 不過以實驗來說，是還蠻好玩的啦XDD
 
-<iframe id="cp_embed_mJIdw" src="http://codepen.io/Rplus/embed/mJIdw?type=result&amp;height=300&amp;safe=true" scrolling="no" frameborder="0" data-height="300" height="300" allowtransparency="true" class="cp_embed_iframe" style="width: 100%;border: none; overflow: hidden;"></iframe>
+<iframe id="cp_embed_mJIdw" src="http://codepen.io/Rplus/embed/mJIdw?type=result&amp;height=300&amp;safe=true" scrolling="no" frameborder="0" data-height="300" height="300" allowtransparency="true" class="cp_embed_iframe" style="width: 100%;border: none; overflow: hidden;"> </iframe>
 
 
 <img src="http://rplus.github.com/Demo/heart/heart_v2.png" alt="heart" id="IMG_heart" />
