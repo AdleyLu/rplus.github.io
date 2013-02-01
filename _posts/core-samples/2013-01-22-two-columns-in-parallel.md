@@ -1,6 +1,7 @@
 ---
 layout: post
 category : Demo
+title: 雙欄自動並列(寬度自適)
 tagline: demo
 tags : [tech-post, demo, css, F2E, codepen]
 ---
