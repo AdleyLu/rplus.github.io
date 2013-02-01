@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>switcher color</title>
+<style>
+body{
+    background:url('http://tw.blizzard.com/_images/subpages/temp_top.jpg') repeat-x top left #010E16;
+    color:#FFF;
+    text-align:center;
+    margin:0;
+}
+a{
+    color:#669;
+}
+#brokenMenu{
+    background-image: url('http://tw.blizzard.com/_images/lang/en-us/nav-bar.gif');
+    background-repeat: no-repeat;
+    width:762px;
+    height:83px;
+    margin:20px auto 50px;
+}
+.top{
+    background-position:left top;
+}
+.bottom{
+    background-position:left bottom;
+}
+</style>
+</head>
+<body>
+<div id="brokenMenu">
+</div>
+    Simulate broken 404 page. <br />
+    origin-page:
+    <a href="http://tw.blizzard.com/zh-tw/company/404">http://tw.blizzard.com/zh-tw/company/404</a>
+<script>
+var switcher = true,
+    MyTarget = document.getElementById('brokenMenu');
+var f_changer = function(){
+    if ( Math.random() > 0.7 ) {
+        MyTarget.className = ( switcher )?('top'):('bottom');
+        switcher = !switcher;
+    };
+}
+setInterval( f_changer, 100);
+</script>
+</body>
+</html>
