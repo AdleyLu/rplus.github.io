@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML>
+<html lang="zh-tw">
+<head>
+<meta charset="UTF-8">
+<title>Youtube Yoodle</title>
+<style>
+#gangnam{
+    width: 110px;
+    height: 30px;
+    float:left;
+    /*background:url('youtube_yoodle_psy_110x30-vflOeb25k.png') 0px 0px repeat-x;*/
+    background:url('http://s.ytimg.com/yts/img/doodles/youtube_yoodle_psy_110x30-vflOeb25k.png') 0px 0px repeat-x;
+}
+</style>
+</head>
+<body>
+<div id="gangnam"></div>
+<script>
+
+window.onload = function(){
+    var hoverinTime = 0,
+        ggX    = document.getElementById('gangnam'),
+        ggPosX = function() {
+            ggX.style.backgroundPosition = (-110*hoverinTime) +'px 0px';
+            hoverinTime += 1;
+        };
+    var startDancing = function(){
+            loopD = window.setInterval( ggPosX ,65);
+        },
+        stopDancing = function(){
+            clearInterval(loopD);
+            hoverinTime = 0;
+            ggPosX();
+        };
+
+    ggX.onmouseover = startDancing;
+    ggX.onmouseout = stopDancing;
+}
+</script>
+</body>
+</html>
