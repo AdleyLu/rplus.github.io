@@ -12,6 +12,9 @@ tags : [tech-post, demo, css, F2E, codepen]
 ### sulotion:
 原本單純的文繞圖(float)，於文字區加一css規則 `overflow:hidden;` 即可解決
 
+<iframe id="cp_embed_mJIdw" src="http://codepen.io/Rplus/embed/mxFaA?type=result&amp;height=400&amp;safe=true" data-height="400" height="400" width="100%" allowtransparency="true">
+</iframe>
+
 ### [Demo](http://codepen.io/Rplus/pen/mxFaA) @ Codepen
 
 ### ref: [facebook][fb] 的留言框

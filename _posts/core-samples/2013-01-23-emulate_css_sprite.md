@@ -1,7 +1,8 @@
 ---
 layout: post
 category : Demo
-tagline: 另個角度模擬css sprite
+title: 以PNG透明度及底色模擬css sprite
+tagline: 減少圖片大小
 tags : [demo, css, F2E, css sprite, InkScape]
 ---
 {% include JB/setup %}
@@ -40,9 +41,7 @@ css sprite 的缺點大概就是圖都兜在了一起
 而且初始就要想一堆這圖片要怎麼弄怎麼調的，實在也是搞肛啦~  
 不過以實驗來說，是還蠻好玩的啦XDD
 
-<iframe src="http://rplus.github.com/Demo/heart/heart.html" width="100%" height="400">
-  
-</iframe>
+<iframe src="http://rplus.github.com/Demo/heart/heart.html" width="100%" height="350"> </iframe>
 
 ###Demo Link:
 <http://rplus.github.com/Demo/heart/heart.html>
