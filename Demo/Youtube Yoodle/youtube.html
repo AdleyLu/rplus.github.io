@@ -22,10 +22,10 @@ window.onload = function(){
         ggX    = document.getElementById('gangnam'),
         ggPosX = function() {
             ggX.style.backgroundPosition = (-110*hoverinTime) +'px 0px';
-            hoverinTime += 1;
+            hoverinTime = (hoverinTime + 1)%53;
         };
     var startDancing = function(){
-            loopD = window.setInterval( ggPosX ,65);
+            loopD = window.setInterval( ggPosX ,20);
         },
         stopDancing = function(){
             clearInterval(loopD);
