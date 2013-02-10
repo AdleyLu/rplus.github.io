@@ -461,6 +461,7 @@ pre code{
     color:inherit;
     background-color:transparent;
     border:0;
+    font-size: small;
 }
 .pre-scrollable{
     max-height:340px;
