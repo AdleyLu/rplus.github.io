@@ -6,7 +6,6 @@ tags : [tech-post, collection]
 ---
 {% include JB/setup %}
 
----
 ## Google Map api
 
 ###傳統map所遇挑戰::
