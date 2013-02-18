@@ -31,12 +31,3 @@ tags : [git]
     - 設定入手難度較高
     - Git現在還是不熟 orz
 
-## Google Map api
-
-###傳統map所遇挑戰::
-+ 傳統js marker: 點太多，將會使頁面變得緩慢
-+ marker 資訊密度過高 > 辨識度下降
-    + 以zoom的動作篩
-    + 密度過高時，將marker融為一顆，以數字顯示 (maker makerCluster)
-
-+ marker info 若太多，將會使得pre-loading 過大
