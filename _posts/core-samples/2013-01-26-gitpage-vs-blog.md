@@ -8,23 +8,13 @@ tags : [git]
 
 ### 選用 GitPage 而非一般 Blog 系統的原因
 
-### so sad...
-+ 不穩定:
-    - 未能登
-    - 按鈕不穩
-+ font-size: fixed
+#### Blog
 
-#### Facebook API
-+ 按讚 by URL (可用[奇怪的|空的]的url)
-+ opern-graph(OG) friendly web-page
-    > by facebook
-+ like button:
-    + dom
-    + iframe( simple, but don't too many in one page)
-+ 按讚數: sum of (別信春哥)
-    + 按讚數
-    + comment數
-    + 分享數
-+ comment:
-+ Admin mode
-    - 可管理留言進階功能
++ 加分
+    + 簡易申請、架站 (狂點下一步)
+    + 模版漂亮、多樣
++ 減分
+    - 要連上網路
+    - 部份 blog 的編輯器的反應速度不好
+    - 底層架構較有限制
+    - 不好備份
