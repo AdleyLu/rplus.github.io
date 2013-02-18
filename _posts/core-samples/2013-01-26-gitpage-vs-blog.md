@@ -1,8 +1,8 @@
 ---
 layout: post
-category : murmur
-tagline: 選用 GitPage 而非一般 Blog 系統的原因
-tags : [git]
+category : lessons
+tagline: I'm late orz...
+tags : [tech-post, collection]
 ---
 {% include JB/setup %}
 
