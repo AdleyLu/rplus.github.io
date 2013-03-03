@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+body,ol{margin:0;padding:0;}
+#loop-IMG-Wrap{
+    width:150px;
+    height:70px;
+    position:relative;
+}
+.imgCtrl-wrap a::selection{
+    background-color:transparent;
+}
+#loop-IMG-Wrap img{
+    position:absolute;
+    top:0;
+    left:0;
+}
+.imgCtrl-wrap{
+    width:150px;
+    height:20px;
+    padding-top:50px;
+    text-align:center;
+    background-color:rgba(200,0,0,.4);
+}
+.imgCtrl-wrap a{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    text-align:center;
+    background-color:#FC0;
+    cursor:pointer;
+    position:relative;
+    z-index:2;
+}
+.stateIcon{
+    position:absolute;
+    top:10px;
+    left:60px;
+    width:30px;
+    height:30px;
+    cursor:pointer;
+    background:rgba(200,200,200,.7);
+    border-radius:30px;
+    display:none;
+    box-shadow:0 0 5px 2px #333
+}
+.stateIcon-play{
+    content:'';
+    width:0;
+    height:0;
+    position:absolute;
+    top:7px;
+    left:12px;
+    border-style:solid;
+    border-width:8px 0 8px 10px;
+    border-color:transparent transparent transparent #FFF;
+}
+.stateIcon-pause{
+    content:'';
+    width:4px;
+    height:15px;
+    position:absolute;
+    top:7px;
+    left:8px;
+    border-left:5px solid #FFF;
+    border-right:5px solid #FFF;
+}
+.stateIcon:after:active{
+}
+</style>
+</head>
+<body>
+<div id="loop-IMG-Wrap">
+    <img src="http://placekitten.com/150/70" title="cat1"/>
+    <img src="http://placehold.it/150x70/990000" title="img3" />
+    <img src="http://placekitten.com/g/150/70" title="cat2" />
+    <img src="http://placehold.it/150x70/990000" title="img3" />
+    <img src="http://placekitten.com/g/150/70" title="cat2" />
+    <img src="http://placehold.it/150x70/330000" title="img4" />
+<!--
+     <div class="imgCtrl-wrap">
+        <a class="imgCtrl-dir" data-dir="-1">&lt;</a>
+        <span class="imgCtrl-numbers">
+            <a class="imgCtrl-num" data-sort="1">1</a>
+            <a class="imgCtrl-num" data-sort="2">2</a>
+            <a class="imgCtrl-num" data-sort="3">3</a>
+            <a class="imgCtrl-num" data-sort="4">4</a>
+        </span>
+        <a class="imgCtrl-dir" data-dir="+1">&gt;</a>
+    </div>
+    <div class="stateIcon">
+        <div class="stateIcon-play"></div>
+        <div class="stateIcon-pause"></div>
+    </div>
+-->
+</div>
+</body>
+<script src="../jquery-1.8.2.min.js"></script>
+<script>
+$(function() {
+
+$.fn.loopIMG = function(settings) {
+    var _defaultSettings = {
+        hover2Change: true,
+        imgTransSpeed: 200,     // (ms)
+        dir: 1,                 // { +1: turn right, -1: turn left }
+        numButton: true,        // 是否出現數字鈕
+        dirButton: true,        // 是否出現方向鈕
+        dirLeft: '<',           // 向左的符號
+        dirRight: '>',          // 向右的符號
+        stateIcon: true,        // 點擊開關自動輪播時是否出現暫停/開始的圖示
+        autoRun: true,          // 是否自動輪播
+        // 自訂class
+        class_imgCtrlWrap: 'imgCtrl-wrap',
+        class_imgCtrlDir: 'imgCtrl-dir',
+        class_imgCtrlNumbers: 'imgCtrl-numbers',
+        class_imgCtrlNum: 'imgCtrl-num',
+        class_stateIcon: 'stateIcon',
+        class_stateIconPlay: 'stateIcon-play',
+        class_stateIconPause: 'stateIcon-pause',
+    };
+    var _settings = $.extend(_defaultSettings, settings);
+    var _handler = function() {
+
+        var $imgWrap = $(this),
+            $imgs = $('img', $imgWrap),
+            imgsNumber = $imgs.length;
+            nowImg = 1,     // 圖片初始化
+            intval = '',    // 輪播
+            dir = _settings.dir;
+
+        // 組模版
+        var temp = {};
+            temp.imgCtrl = [
+                    '',
+                    '<a class="' + _settings.class_imgCtrlNum + '" data-sort="$i">$i</a>',
+                    ''
+                ],
+            temp.imgCtrlHtml = '';
+            temp.imgCtrlNumberHtml = '';
+            temp.i = 0;
+            temp.stateIcon = _settings.stateIcon ? '<div class="' + _settings.class_stateIcon + '"><div class="' + _settings.class_stateIconPlay + '"></div><div class="' + _settings.class_stateIconPause + '"></div></div>' : '';
+
+        // 對應相片數，產生數字按鈕
+        if (_settings.numButton) {
+            temp.imgCtrlNumberHtml = '<span class="' + _settings.class_imgCtrlNumbers + '">';
+            for (; temp.i < imgsNumber; temp.i += 1 ) {
+                temp.imgCtrlNumberHtml += temp.imgCtrl[1].replace( /\$i/g , temp.i + 1 );
+            };
+            temp.imgCtrlNumberHtml += '</span>';
+        };
+
+        // 生成方向鈕
+        if (_settings.dirButton) {
+            temp.imgCtrl[0] = '<a class="'+ _settings.class_imgCtrlDir +'" data-dir="-1">' + _settings.dirLeft + '</a>';
+            temp.imgCtrl[2] = '<a class="'+ _settings.class_imgCtrlDir +'" data-dir="+1">' + _settings.dirRight + '</a>';
+        };
+
+        // 控制鈕合體
+        temp.imgCtrlHtml += '<div class="' + _settings.class_imgCtrlWrap + '">'
+            + temp.imgCtrl[0]
+            + temp.imgCtrlNumberHtml
+            + temp.imgCtrl[2] +'</div>' + temp.stateIcon;
+
+        // 控制鈕合體插入各控制項元件
+        $imgWrap.append(temp.imgCtrlHtml);
+
+        var imgLoop = function(index) {
+                // index: [1-#]
+                if ( index !== nowImg ) {
+                    $imgs.eq(nowImg - 1).fadeOut(_settings.imgTransSpeed).end()
+                       .eq(index - 1).fadeIn(_settings.imgTransSpeed);
+                    nowImg = index;
+                };
+            };
+
+        // @dir: 輪播方向 +1: 向右; -1: 向左
+        var startAutoRun = function() {
+                if ( intval == '' ) {
+                    intval = window.setInterval(function() { imgLoop( ( nowImg + dir ) % imgsNumber ) }, 1000);
+                }
+            },
+            stopAutoRun = function() {
+                window.clearInterval(intval);
+                intval = '';
+            };
+
+        var imgSwitcher = function() {
+            var _thisDir = parseInt($(this).attr('data-dir')),
+                _thisSort = parseInt($(this).attr('data-sort'));
+            if ( _thisDir ) {
+                imgLoop( ( nowImg + dir ) % imgsNumber );
+                dir = _thisDir;
+            } else if( _thisSort ) {
+                imgLoop( _thisSort );
+            };
+        }
+
+        $('.' + _settings.class_imgCtrlWrap).find('a').on({
+            'click': imgSwitcher ,
+            'mouseenter': (_settings.hover2Change && imgSwitcher)
+        });
+
+        var _icons = $('.' + _settings.class_stateIcon),
+            _iconPlay  = $('.' + _settings.class_stateIconPlay, _icons),
+            _iconPause = $('.' + _settings.class_stateIconPause, _icons);
+
+        // images clicl to stop/start loop
+        $imgs.add(_icons).on('click', function() {
+            if (intval === '') {
+                startAutoRun();
+                _iconPause.hide();
+                _iconPlay.show();
+                _icons.stop().css({'opacity':1, 'display': 'block'}).animate({'opacity':0},1500);
+            } else {
+                stopAutoRun();
+                _iconPlay.hide();
+                _iconPause.show();
+                _icons.stop().css({'opacity':1, 'display': 'block'}).animate({'opacity':0},1500);
+            };
+        });
+
+        // initialize
+        $imgs.not(':first').add(_iconPlay, _iconPause).hide();
+
+        if (_settings.autoRun) { startAutoRun(); };
+    };
+    return this.each(_handler);
+};
+
+$('#loop-IMG-Wrap').loopIMG();
+});
+</script>
+</html>
