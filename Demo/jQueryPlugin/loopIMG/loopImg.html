@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+body,ol{margin:0;padding:0;}
+#loop-IMG-Wrap{
+    width:150px;
+    height:70px;
+    position:relative;
+}
+.imgCtrl-wrap a::selection{
+    background-color:transparent;
+}
+#loop-IMG-Wrap img{
+    position:absolute;
+    top:0;
+    left:0;
+}
+.imgCtrl-wrap{
+    width:150px;
+    height:20px;
+    padding-top:50px;
+    text-align:center;
+    background-color:rgba(200,0,0,.4);
+}
+.imgCtrl-wrap a{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    text-align:center;
+    background-color:#FC0;
+    cursor:pointer;
+    position:relative;
+    z-index:2;
+}
+.stateIcon{
+    position:absolute;
+    top:10px;
+    left:60px;
+    width:30px;
+    height:30px;
+    cursor:pointer;
+    background:rgba(200,200,200,.7);
+    border-radius:30px;
+    display:none;
+    box-shadow:0 0 5px 2px #333
+}
+.stateIcon-play{
+    content:'';
+    width:0;
+    height:0;
+    position:absolute;
+    top:7px;
+    left:12px;
+    border-style:solid;
+    border-width:8px 0 8px 10px;
+    border-color:transparent transparent transparent #FFF;
+}
+.stateIcon-pause{
+    content:'';
+    width:4px;
+    height:15px;
+    position:absolute;
+    top:7px;
+    left:8px;
+    border-left:5px solid #FFF;
+    border-right:5px solid #FFF;
+}
+.stateIcon:after:active{
+}
+</style>
+</head>
+<body>
+<div id="loop-IMG-Wrap">
+    <div class="loopWrap">
+        <img src="http://fakeimg.pl/150x70/990000/009/?text=1&amp;font=lobster" title="cat1"/>
+        <img src="http://fakeimg.pl/150x70/ffcc00/000/?text=2&amp;font=lobster" title="cat1"/>
+        <img src="http://fakeimg.pl/150x70/000000/ccc/?text=3&amp;font=lobster" title="cat1"/>
+        <img src="http://fakeimg.pl/150x70/666666/fff/?text=4&amp;font=lobster" title="cat1"/>
+        <img src="http://fakeimg.pl/150x70/999900/00f/?text=5&amp;font=lobster" title="cat1"/>
+    </div>
+    <!--
+    <div class="imgCtrl-wrap">
+        <a class="imgCtrl-dir" data-dir="-1">&lt;</a>
+        <span class="imgCtrl-numbers">
+            <a class="imgCtrl-num" data-sort="1">1</a>
+            <a class="imgCtrl-num" data-sort="2">2</a>
+            <a class="imgCtrl-num" data-sort="3">3</a>
+            <a class="imgCtrl-num" data-sort="4">4</a>
+        </span>
+        <a class="imgCtrl-dir" data-dir="+1">&gt;</a>
+    </div>
+    <div class="stateIcon">
+        <div class="stateIcon-play"></div>
+        <div class="stateIcon-pause"></div>
+    </div>
+    -->
+</div>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="jquery-loopIMG.js"></script>
+<script>
+$(function() {
+    $('#loop-IMG-Wrap').loopIMG({
+        stateIcon: false
+    });
+});
+</script>
+</html>
