@@ -15,11 +15,11 @@ tags : [sublime, notw]
 
 #### 快速鍵 keybind
 
-+ 快速切換雙層分頁群(tab group)，  
++ 快速切換雙層分頁群(tab group)，
   這對於有大量工作需要區分小case時非常有用，  
   在必要的工作環境裡，甚至會開到四層垂直 group  
   `set_layout` 這東西是從左上到右下的分頁區塊，熟了可以切出神奇的版塊XD  
-  可以參見[set_layout reference@Sublime Forum](http://www.sublimetext.com/forum/viewtopic.php?f=6&t=7284)  
+  可以參見[set_layout reference@Sublime Forum](http://www.sublimetext.com/forum/viewtopic.php?f=6&t=7284)
 
         {
             "keys": ["alt+home"],
@@ -33,7 +33,8 @@ tags : [sublime, notw]
         }
 
 + 開關側欄
-    { "keys": ["alt+a"], "command": "toggle_side_bar" }
+
+        { "keys": ["alt+a"], "command": "toggle_side_bar" }
 
 
 #### 套件 Package
