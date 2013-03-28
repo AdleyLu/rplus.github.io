@@ -20,6 +20,7 @@ tags : [sublime, notw]
   在必要的工作環境裡，甚至會開到四層垂直 group  
   `set_layout` 這東西是從左上到右下的分頁區塊，熟了可以切出神奇的版塊XD  
   可以參見[set_layout reference@Sublime Forum](http://www.sublimetext.com/forum/viewtopic.php?f=6&t=7284)  
+
         {
             "keys": ["alt+home"],
             "command": "set_layout",
