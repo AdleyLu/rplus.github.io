@@ -9,7 +9,7 @@ tags : [js, tech]
 
 ### 2013-03-25
 
-1. 網頁三本柱
+1. webpage:
     + html: content
     + css: style
     + javascript: behavior
