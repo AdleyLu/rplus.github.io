@@ -25,14 +25,27 @@ tags : [js, tech]
     DOM (document object model)  
     DOM 在各瀏覽器的不同 >> jQuery fix!
 
-4. jQuery 操作優化::
+4. jQuery DOM 操作優化::
     1. selector:
         + [Sizzle](http://sizzlejs.com/)::  
-            left < right(key selector)
-        + `$#anID.find('a')`, `$('a', $anID)`  
-            `$('#anID a')`
+            left < right(key selector)  
+            ID > tag > .class > :hover  
+            > [!] 原生JS 取物法最好: 
+            + `document.getElementById`
+            + `document.getElementsByTagName`
+            + `document.getElementsByName`
+            + `document.getElementsByClassName` (gte IE9)
+
+        + HTML5 tag:  
+            `document.getElementsByTagName` is better
+
+        + 取物法:
+            + find: `$#anID.find('a')`
+            + content: `$('a', $anID)` [4]
+            + selector: `$('#anID a')`
         + cache jQuery object
-        + chaining
+        + chaining:
+            > jQuery.fn return a jq object
 
     2. limit [DOM Manipulation](http://api.jquery.com/category/Manipulation/)
         + collect:
@@ -41,10 +54,21 @@ tags : [js, tech]
         + `html()` is quick, 少用 `prepend(), append(), after()`
         + Document Fragments
 
-    3. odd::
+    3. HTML/CSS/JS 分離: 利於移植
+        > 需要考慮移植?
+
+    4. status:
+        + old: lots of custom attribute
+        + jquery: $.data()
+
+    10. odd::
         + [Append style tags when styling 15 or more elements](http://jonraasch.com/blog/10-advanced-jquery-performance-tuning-tips-from-paul-irish)
 
-    4. 保護 jQuery code:
+5. jQuery odd
+    1. use jquery core function:  
+        `$.ajax` > `$.get`
+
+    1. 保護 jQuery code:
         1. `noConflict()`:
 
                 var j = jQuery.noConflict();
@@ -70,7 +94,7 @@ tags : [js, tech]
                 <script>!window.jQuery && document.write('<script src="js/jquery-1.4.2.min.js"><\/script>')</script>
 
     4. others:
-        `$(window).load(){}`
+        `$(window).load` `$(document).ready`
 
     3. 少用jQuery::  
        More JavaScript-based in general, rather than jQuery specific.
@@ -82,5 +106,8 @@ tags : [js, tech]
 
 #### ref::
 + selector:
-    + [初探 jQuery 的 Sizzle 選擇器](http://www.baiduux.com/blog/2010/07/15/the_sizzle_in_jquery/)
-    + [How jQuery Beginners can Test and Improve their Code](http://net.tutsplus.com/tutorials/javascript-ajax/how-jquery-beginners-can-test-and-improve-their-code/)
+    1. [初探 jQuery 的 Sizzle 選擇器](http://www.baiduux.com/blog/2010/07/15/the_sizzle_in_jquery/)
+    2. [How jQuery Beginners can Test and Improve their Code](http://net.tutsplus.com/tutorials/javascript-ajax/how-jquery-beginners-can-test-and-improve-their-code/)
+    3. [Sizzle (jQuery) Selector Pitfalls](http://www.sitecrafting.com/blog/sizzle-jquery-selector-pitfalls/ "sizzle selector 需要避開的坑")
+    4. [Understanding the Context in jQuery](http://brandonaaron.net/blog/2009/06/24/understanding-the-context-in-jquery)
+    5. [10 Advanced jQuery Performance Tuning Tips from Paul Irish](http://jonraasch.com/blog/10-advanced-jquery-performance-tuning-tips-from-paul-irish)

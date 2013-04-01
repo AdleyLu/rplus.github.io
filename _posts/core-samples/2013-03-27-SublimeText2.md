@@ -11,7 +11,11 @@ tags : [sublime, notw]
 
 #### 設定 profile
 
-    "wide_caret": true
+    "wide_caret": true,  // 讓輸入線變寬
+    "bold_folder_labels": true,  // 資料夾粗體顯示
+    "highlight_modified_tabs": true,  // 異動檔標示
+    "draw_white_space": "selection",  // 選取時顯示空白
+
 
 #### 快速鍵 keybind
 
@@ -36,10 +40,15 @@ tags : [sublime, notw]
 
         { "keys": ["alt+a"], "command": "toggle_side_bar" }
 
++ 貼上並縮排
+
+        { "keys": ["ctrl+v"], "command": "paste_and_indent" },
+        { "keys": ["ctrl+shift+v"], "command": "paste" }
+
 
 #### 套件 Package
 
-+ Goto
++ Goto-CSS-Declaration
 
 #### 巨集 macro
 
@@ -47,3 +56,10 @@ tags : [sublime, notw]
 #### 使用流程 work flow
 
     + 專案管理
+
+
+---
+
+## ref::
++ [5 great visual tweaks for Sublime Text](http://wesbos.com/sublime-text-5-visual-tweaks/)
++ [5 more Sublime Text tweaks & tips](http://wesbos.com/5-sublime-text-tweaks-tips/)
