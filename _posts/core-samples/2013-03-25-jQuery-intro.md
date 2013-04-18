@@ -22,8 +22,7 @@ tags : [js, tech]
     + talk over the network to fetch new content
 
 3. why jQuery?  
-    DOM (document object model)  
-    DOM 在各瀏覽器的不同 >> jQuery fix!
+    DOM (document object model) 在各瀏覽器的不同 >> jQuery fix!
 
 4. jQuery DOM 操作優化::
     1. selector:
@@ -36,18 +35,35 @@ tags : [js, tech]
             + `document.getElementsByName`
             + `document.getElementsByClassName` (gte IE9)
 
-        + HTML5 tag:  
-            `document.getElementsByTagName` is better
+        + HTML5 query:  
+            `document.getElementsByQuery` is better
 
-        + 取物法:
+        + 多階取物法:
             + find: `$#anID.find('a')`
             + content: `$('a', $anID)` [4]
             + selector: `$('#anID a')`
         + cache jQuery object
         + chaining:
-            > jQuery.fn return a jq object
+            > jQuery.fn return a jq object!
+        + jQuery selector method:
+            .add
+                .find
+            .filter
+                .has
+                .not
+                .slice
+                .children
+            .eq === .get
+            return true|false:
+                .is
+                .hasClass
 
-    2. limit [DOM Manipulation](http://api.jquery.com/category/Manipulation/)
+            special:
+                .closest
+                .index
+
+
+    2. [limit DOM Manipulation](http://api.jquery.com/category/Manipulation/)
         + collect:
             + `array.push()`
             + `string += val`
@@ -63,6 +79,7 @@ tags : [js, tech]
 
     10. odd::
         + [Append style tags when styling 15 or more elements](http://jonraasch.com/blog/10-advanced-jquery-performance-tuning-tips-from-paul-irish)
+          > be careful at style numbers limit (32) at old IE
 
 5. jQuery odd
     1. use jquery core function:  
@@ -100,8 +117,10 @@ tags : [js, tech]
        More JavaScript-based in general, rather than jQuery specific.
         + for ? $.each  
             適用，不濫用。  
-            時間、效能、品質 是三項無法同時最佳化的
-        + `$.css` ? `$.addClass`
+            > 時間、效能、品質 是三項無法同時最佳化的
+        + `$.css` ? `$.addClass`:
+                + css: dynamic number
+                + class: most state
         + `$('#anID')` ? `document.getElementById('someAnchor')`
 
 #### ref::
