@@ -97,3 +97,11 @@ tags : [browser, js, bookmarklet]
         javascript: (function () {
             window.open('http://www.10youtube.com/watch?v=' + document.location.href.replace(/^.+v=(.{11})(.+)?/g, '$1'));
         })();
+
+
+---
+tools:
+
+<http://jsbeautifier.org/>
+
+<http://meyerweb.com/eric/tools/dencoder/>
