@@ -1,7 +1,7 @@
 ---
 layout: post
 category : lessons
-tagline: orz...
+tagline: 其實聽不太懂 = =
 tags : [tech-post, collection]
 ---
 {% include JB/setup %}
@@ -51,29 +51,31 @@ tags : [tech-post, collection]
 	// this === A; "點的左邊", this: readonly
 
 + 2
-	function() {}
-	//=> new Function() everytime
+		function() {}
+		//=> new Function() everytime
 
 + 3 phtotype 實作
-	var MyTableClass = function(dom) {
-		this._dom = dom;
-	}
-	// MyTableClass.phototype  // only 實字宣告函數有
-	MyTableClass.phototype._dom = null;
-	MyTableClass.phototype.color = function() {};
-	...
 
-	var talbe = new MyTableClass;
-	//=> 有沒有 new 會影響到內部的 this, 不用 new 會使第二次 this 指向 window
-	// 內部的 function 會是同等的 ; table2.color == table1.color //=> true
-	// 可繼承 原 function 內的 method
+		var MyTableClass = function(dom) {
+			this._dom = dom;
+		}
+		// MyTableClass.phototype  // only 實字宣告函數有
+		MyTableClass.phototype._dom = null;
+		MyTableClass.phototype.color = function() {};
+		...
+
+		var talbe = new MyTableClass;
+		//=> 有沒有 new 會影響到內部的 this, 不用 new 會使第二次 this 指向 window
+		// 內部的 function 會是同等的 ; table2.color == table1.color //=> true
+		// 可繼承 原 function 內的 method
 
 + 4
 	ppototype 常見錯誤:
-	MyTableClass.phototype = {
-		_dom: dom,
-		color: function() {}
-	}
+
+		MyTableClass.phototype = {
+			_dom: dom,
+			color: function() {}
+		}
 
 	少了 constructor //=> instance 繼承會 error
 
@@ -94,15 +96,14 @@ tags : [tech-post, collection]
 	myfn(); // this == window; a.b 形式
 	myfn.apply(o, [function(param_o)])
 
-apply: 多在架構面使用
-call: 多數可使用 apply 來替代使用
-myfn.call(o, arg1, arg2, arg3)
++ apply: 多在架構面使用
++ call: 多數可使用 apply 來替代使用
++ myfn.call(o, arg1, arg2, arg3)
 
-o.test(function(){
-	my_callback.apply(window,[o])
-})
-==
-o.test(my_callback.bind(window));
+		o.test(function(){
+			my_callback.apply(window,[o])
+		})
+		o.test(my_callback.bind(window));
 
 ### closure 閉包
 	var 變數生命週期
