@@ -3,7 +3,7 @@ layout: post
 category : lessons
 title: 以長圖做動畫效果
 tagline: Youtube gangnam style logo @ 2012
-tags : [js,tech-post,css,split,setInterval]
+tags : [js,tech-post,css,split,setInterval,demo]
 ---
 {% include JB/setup %}
 
@@ -16,7 +16,9 @@ tags : [js,tech-post,css,split,setInterval]
 查了一下，原來是 `backgroundPositionX` 是 MSIE，而非標準用法(但其實我覺得很好用呀 = =a)  
 遂改用 `backgroundPosition`， Firefox 就能正常跳舞了~~
 
-<iframe id="cp_embed_mJIdw" src="http://codepen.io/Rplus/embed/mJIdw?type=result&amp;height=300&amp;safe=true" data-height="300" height="300" width="100%" allowtransparency="true"> </iframe>
+<pre class="codepen" data-height="300" data-type="result" data-href="mJIdw" data-user="Rplus" data-safe="false"><code></code><a href="http://codepen.io/Rplus/pen/mJIdw">Check out this Pen!</a></pre>
+<script async src="http://codepen.io/assets/embed/ei.js"></script>
+
 
 ###Demo Link:
 <http://rplus.github.com/Demo/Youtube Yoodle/youtube.html>
