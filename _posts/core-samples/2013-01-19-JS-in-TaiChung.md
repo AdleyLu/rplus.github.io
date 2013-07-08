@@ -1,8 +1,8 @@
 ---
 layout: post
-category : lessons
+category : action
 tagline: I'm late orz...
-tags : [tech-post, collection]
+tags : [action, tech-post, collection]
 ---
 {% include JB/setup %}
 
