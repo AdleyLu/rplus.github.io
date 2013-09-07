@@ -43,11 +43,11 @@ JavaScript:
 *************
 ref:
 
-+ [Kuro Hsu][KuroHsu] @ [JavaScript.tw][jsgroup] @ Facebook 的 [回應][answer]
++ Facebook 的 [回應][answer] by [Kuro Hsu][KuroHsu] @ [JavaScript.tw][jsgroup]
 + [Is there a way to make text unselectable on an html page? @ stackoverflow](http://stackoverflow.com/a/4448972)
 
 
 
 [KuroHsu]: https://www.facebook.com/kurotanshi "Kuro Hsu@Facebook"
 [jsgroup]: https://www.facebook.com/groups/javascript.tw "Javascript in Taiwan @ Facebook"
-[answer]: https://www.facebook.com/groups/javascript.tw/permalink/324164747684870/?comment_id=324167091017969&offset=0&total_comments=3
+[answer]: https://www.facebook.com/groups/javascript.tw/permalink/324164747684870/?comment_id=324167091017969
