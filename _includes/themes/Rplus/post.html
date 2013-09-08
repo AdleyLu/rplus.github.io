@@ -1,9 +1,9 @@
-<div class="page-header">
+<header class="page-header">
   <h2>{{ page.title }} <small>Supporting tagline</small></h2>
-</div>
+</header>
 
 <div class="page-body">
-  <div class="page-content">
+  <article class="page-content">
     {{ content }}
     <ul class="pure-paginator">
     {% if page.previous %}
@@ -19,7 +19,7 @@
     {% endif %}
     </ul>
     <div class="comment">{% include JB/comments %}</div>
-  </div>
+  </article>
 
   <label for="sidebar-ctrl" class="sidebar-controler">≡</label>
   <input id="sidebar-ctrl" type="checkbox">

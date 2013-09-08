@@ -228,8 +228,9 @@ a {
 
 .page-content .pure-paginator {
   padding: 10px 0;
-  border-top: 1px solid #999;
-  border-bottom: 1px solid #999;
+  margin: 40px auto;
+  border-top: 1px dashed #999;
+  border-bottom: 1px dashed #999;
   border-left: none;
   text-align: center;
   a {
@@ -249,5 +250,5 @@ footer {
 
 .comment {
   width: 90%;
-  margin: 0 auto;
+  margin: 20px auto;
 }
