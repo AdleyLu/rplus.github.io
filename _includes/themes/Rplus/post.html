@@ -1,23 +1,23 @@
 <div class="page-header">
-  <h1>{{ page.title }} <small>{{ page.tagline }}</small></h1>
+  <h2>{{ page.title }} <small>Supporting tagline</small></h2>
 </div>
 
-<div class="row">
-  <div class="span8">
+<div class="page-body">
+  <div class="page-content">
     {{ content }}
     <hr>
-    <div class="pagination">
-      <ul>
+    <div class="paginator">
+      <ul class="pure-paginator">
       {% if page.previous %}
-        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+        <li><a class="pure-button prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
       {% else %}
-        <li class="prev disabled"><a>&larr; Previous</a></li>
+        <li><a class="pure-button prev disabled">&larr; Previous</a></li>
       {% endif %}
-        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+        <li><a class="pure-button" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
       {% if page.next %}
-        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+        <li><a class="pure-button next" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
       {% else %}
-        <li class="next disabled"><a>Next &rarr;</a>
+        <li><a class="pure-button next disabled">Next &rarr;</a>
       {% endif %}
       </ul>
     </div>
@@ -25,7 +25,10 @@
     {% include JB/comments %}
   </div>
 
-  <div class="span4">
+  <label for="sidebar-ctrl" class="sidebar-controler">≡</label>
+  <input id="sidebar-ctrl" type="checkbox">
+
+  <div class="sidebar">
     <h4>Published</h4>
     <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
 
@@ -36,13 +39,5 @@
     {% include JB/tags_list %}
     </ul>
   {% endunless %}
-    <h4>post list</h4>
-    <div>
-      <ul class="posts">
-        {% for post in site.posts %}
-          <li><a href="{{ BASE_PATH }}{{ post.url }}" title="{{ post.date | date_to_string }}">{{ post.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
   </div>
 </div>
