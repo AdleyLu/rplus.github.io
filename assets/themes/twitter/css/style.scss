@@ -19,20 +19,19 @@ $desktop: 960px 12;
 body {
   color: #333;
   line-height: 1.5;
-  background-color: #eee;
-}
-%code {
-  background-color: #f5f5f5;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #EEE;
 }
 %nobreak {
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  @extend %code;
+
+  // code -style
+  background-color: #F5F5F5;
+  border-radius: 4px;
+  border: 1px solid #CCC;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 pre {
   padding: 3px 8px;
@@ -46,6 +45,7 @@ pre {
     border: 0;
   }
 }
+
 code {
   padding-left: 5px;
   padding-right: 5px;
@@ -53,16 +53,16 @@ code {
   color: #D14;
   font-size: small;
 }
-blockquote {
-}
+
 a {
-  color: #08c;
+  color: #08C;
   text-decoration: none;
   &:hover {
     color: #058;
     text-decoration: underline;
   }
 }
+
 .navbar {
   margin-bottom: 20px;
   @include container;
@@ -71,9 +71,11 @@ a {
     text-decoration: none;
   }
 }
+
   .navbar-inner {
     background-color: transparent!important;
   }
+
   .brand {
     font-weight: 900;
     background-color: rgba(255, 0, 0, .1);
@@ -81,6 +83,7 @@ a {
       font-size: 1.6em;
     }
   }
+
   .nav {
     margin: 0;
     padding-left: 0;
@@ -91,6 +94,7 @@ a {
   .brand {
     display: block!important;
   }
+
   .navbar {
     text-align: center;
   }
@@ -98,12 +102,13 @@ a {
 
 .container {
   @include container;
-  background-color: #fff;
-  box-shadow: 0 0 3px 1px #ccc;
+  background-color: #FFF;
+  box-shadow: 0 0 3px 1px #CCC;
   img {
     max-width: 100%;
   }
 }
+
 .page-sidebar {
   position: fixed;
   z-index: 1;
@@ -114,13 +119,14 @@ a {
   max-height: 90%;
   overflow-y: auto;
   transition: right .5s;
-  background-color: #fff;
+  background-color: #EED;
   box-shadow: 0 0 7px 3px #999;
   border-radius: 10px 0 0 10px;
-  &:hover {
-    right: -20px;
+  ul {
+    list-style-type: square;
   }
 }
+
 .sidebar-controler {
   display: block;
   position: fixed;
@@ -145,12 +151,14 @@ a {
     transform: rotate(90deg);
   }
 }
-  input {
+
+  #sidebar-ctrl {
     display: none;
     &:checked + .page-sidebar {
       right: -20px;
     }
   }
+
 .page-content {
   ul, ol {
     padding-left: 20px;
@@ -160,7 +168,7 @@ a {
     margin: 1em 10px;
     padding: .7em 10px .7em 50px;
     border-left: 10px solid #DDD;
-    background: #f9f9f9;
+    background: #F9F9F9;
     position: relative;
     quotes: "\201C""\201D""\2018""\2019";
     p {
