@@ -226,13 +226,28 @@ a {
   }
 }
 
-.pure-paginator {
-  padding-left: 0;
+.page-content .pure-paginator {
+  padding: 10px 0;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  border-left: none;
   text-align: center;
+  a {
+    color: #C0C1C3;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7);
+    &:hover{
+      text-decoration: none;
+    }
+  }
 }
 
 footer {
   @include container;
   text-align: center;
   font-size: small;
+}
+
+#disqus_thread {
+  width: 90%;
+  margin: 0 auto;
 }
