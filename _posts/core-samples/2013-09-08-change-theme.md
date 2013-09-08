@@ -10,3 +10,6 @@ tags : [blog, jekyll, theme]
 + [date format](http://liquid.rubyforge.org/classes/Liquid/StandardFilters.html#M000012)  
     via: [jekyll date format?](http://stackoverflow.com/q/7395520)  
     部份 jekyll 內建日期格式: [jekyll Templates](http://jekyllrb.com/docs/templates/)
+
++ change theme:  
+    變更 `_layouts` 裡 html theme 設定
