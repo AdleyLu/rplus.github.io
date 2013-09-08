@@ -30,7 +30,16 @@
 
   <div class="page-sidebar">
     <h4>Published</h4>
-    <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
+    <!-- <time class="date" datetime="{{ page.date }}">{{ page.date | date_to_long_string }}</time> -->
+    <time class="date" datetime="{{ page.date }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+
+  {% unless page.categories == empty %}
+    <h4>Categories</h4>
+    <ul class="categories_box">
+      {% assign categories_list = page.categories %}
+      {% include JB/categories_list %}
+    </ul>
+  {% endunless %}
 
   {% unless page.tags == empty %}
     <h4>Tags</h4>
@@ -48,5 +57,8 @@
         {% endfor %}
       </ul>
     </div>
+
+    <h4>About R+</h4>
+
   </div>
 </div>
