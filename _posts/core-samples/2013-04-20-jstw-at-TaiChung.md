@@ -29,32 +29,34 @@ tags : [tech-post, collection]
 + phototype
 	+ 使用時機
 
-
-		<script>
-		var MyTable = function(/*輔助用註解 table*/ dom) {
-			// ini();
-			return {
-				_dom: dom,
-				color: function() {
-					this._dom
-				},
-				addRow: function(text) {},
-				delRow: function(index) {}
+			<script>
+			var MyTable = function(/*輔助用註解 table*/ dom) {
+				// ini();
+				return {
+					_dom: dom,
+					color: function() {
+						this._dom
+					},
+					addRow: function(text) {},
+					delRow: function(index) {}
+				}
 			}
-		}
-		</script>
+			</script>
 
+---
 
-+ 1
-	what is "this"::
-	A.B(this)
-	// this === A; "點的左邊", this: readonly
+1. .
 
-+ 2
+		what is "this"::
+		A.B(this)
+		// this === A; "點的左邊", this: readonly
+
+2. .
+
 		function() {}
 		//=> new Function() everytime
 
-+ 3 phtotype 實作
+3. phtotype 實作
 
 		var MyTableClass = function(dom) {
 			this._dom = dom;
@@ -69,8 +71,7 @@ tags : [tech-post, collection]
 		// 內部的 function 會是同等的 ; table2.color == table1.color //=> true
 		// 可繼承 原 function 內的 method
 
-+ 4
-	ppototype 常見錯誤:
+4. ppototype 常見錯誤:
 
 		MyTableClass.phototype = {
 			_dom: dom,

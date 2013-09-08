@@ -11,10 +11,14 @@ tags : [sublime, notw]
 
 #### 設定 profile
 
-    "wide_caret": true,  // 讓輸入線變寬
-    "bold_folder_labels": true,  // 資料夾粗體顯示
-    "highlight_modified_tabs": true,  // 異動檔標示
-    "draw_white_space": "selection",  // 選取時顯示空白
+    "show_tab_close_buttons": false,
+    "translate_tabs_to_spaces": true,
+    "always_show_minimap_viewport": true,
+    "wide_caret": true,                 // 讓輸入線變寬
+    "bold_folder_labels": true,         // 資料夾粗體顯示
+    "highlight_modified_tabs": true,    // 異動檔標示
+    "draw_white_space": "selection",    // 選取時顯示空白
+    "word_wrap": "true"
 
 
 #### 快速鍵 keybind

@@ -29,11 +29,12 @@ tags : [js, tech]
         + [Sizzle](http://sizzlejs.com/)::  
             left < right(key selector)  
             ID > tag > .class > :hover  
-            > [!] 原生JS 取物法最好: 
-            + `document.getElementById`
-            + `document.getElementsByTagName`
-            + `document.getElementsByName`
-            + `document.getElementsByClassName` (gte IE9)
+
+                [!] 原生JS 取物法最好:
+                    document.getElementById
+                    document.getElementsByTagName
+                    document.getElementsByName
+                    document.getElementsByClassName (gte IE9)
 
         + HTML5 query:  
             `document.getElementsByQuery` is better
@@ -44,23 +45,24 @@ tags : [js, tech]
             + selector: `$('#anID a')`
         + cache jQuery object
         + chaining:
-            > jQuery.fn return a jq object!
+            > jQuery.fn return a jQ object!
         + jQuery selector method:
-            .add
-                .find
-            .filter
-                .has
-                .not
-                .slice
-                .children
-            .eq === .get
-            return true|false:
-                .is
-                .hasClass
 
-            special:
-                .closest
-                .index
+                .add
+                    .find
+                .filter
+                    .has
+                    .not
+                    .slice
+                    .children
+                .eq === .get
+                return true|false:
+                    .is
+                    .hasClass
+
+                special:
+                    .closest
+                    .index
 
 
     2. [limit DOM Manipulation](http://api.jquery.com/category/Manipulation/)
@@ -68,7 +70,7 @@ tags : [js, tech]
             + `array.push()`
             + `string += val`
         + `html()` is quick, 少用 `prepend(), append(), after()`
-        + Document Fragments
+        + `document.createDocumentFragment`
 
     3. HTML/CSS/JS 分離: 利於移植
         > 需要考慮移植?
