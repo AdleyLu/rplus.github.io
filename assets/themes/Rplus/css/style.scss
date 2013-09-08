@@ -3,18 +3,8 @@
 $total-columns  : 6;             // a 12-column grid
 $column-width   : 10em;            // each column is 4em wide
 $gutter-width   : 1em;            // 1em gutters between columns
-$grid-padding   : $gutter-width;  // grid-padding equal to gutters
-
-// $mobile-up  : "min-width: 480px";
-// $mobile-dw  : "max-width: 480px";
-// $pad-up     : "min-width: 768px";
-// $pad-dw     : "max-width: 768px";
-// $desktop-up : "min-width: 960px";
-// $desktop-dw : "max-width: 960px";
-
-$mobile : 480px 6;
-$pad    : 768px 6;
-$desktop: 960px 12;
+// $grid-padding   : $gutter-width;  // grid-padding equal to gutters
+$grid-padding   : 0;  // grid-padding equal to gutters
 
 body {
   color: #333;
@@ -27,7 +17,7 @@ body {
   word-break: break-all;
   word-wrap: break-word;
 
-  // code -style
+  // code - style
   background-color: #F5F5F5;
   border-radius: 4px;
   border: 1px solid #CCC;
@@ -69,20 +59,26 @@ a {
   // background-color: rgba(255, 0, 0, .2);
   a:hover {
     text-decoration: none;
+    color: #900;
   }
 }
-
   .navbar-inner {
     background-color: transparent!important;
     .pure-menu-heading {
       margin: 0;
       background-color: rgba(255, 0, 0, .1);
       font-size: 1.4em;
+      text-transform: none;
+      a {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
     }
-  }
-
-  .brand {
-    padding: 0;
+    li a {
+      &:hover, &:active {
+        background-color: #DDD;
+      }
+    }
   }
 
   .nav {
@@ -91,19 +87,10 @@ a {
     border-bottom: 1px solid rgba(255,0,0,.6);
   }
 
-@media (max-width: 780px) {
-  .pure-menu-heading {
-    display: block!important;
-  }
-
-  .navbar {
-    text-align: center;
-  }
-}
-
 .container {
   @include container;
   background-color: #FFF;
+  padding-top: 1px;
   box-shadow: 0 0 3px 1px #CCC;
   img {
     max-width: 100%;
@@ -122,8 +109,20 @@ a {
   transition: right .5s;
   box-shadow: 0 0 7px 3px #999;
   border-radius: 10px 0 0 10px;
+  background-color: #FFF;
   ul {
     list-style-type: square;
+    padding-left: 30px;
+  }
+  h4 {
+    background-color: #EEE;
+    padding-left: 5px;
+    margin-bottom: 0;
+    border-left: 10px solid #CCC;
+    border-bottom: 1px solid #CCC;
+  }
+  > h4:first-child {
+    margin-top: 0;
   }
 }
 
@@ -153,7 +152,6 @@ a {
     display: none;
     &:checked + .page-sidebar {
       right: -20px;
-      background-color: #EED;
     }
   }
 
@@ -188,13 +186,24 @@ a {
   }
 }
 
+.content {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 @include at-breakpoint(850px 6) {
+  .container .content {
+    @include container;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .page-content {
     @include span-columns(9, 12);
   }
   .page-sidebar {
     @include span-columns(3 omega, 12);
     position: static!important;
+    border-radius: 0;
     box-shadow: none;
   }
   .sidebar-controler {
@@ -202,7 +211,18 @@ a {
   }
 }
 
-.paginator {
+@media (max-width: 850px) {
+  .pure-menu-heading {
+    display: block!important;
+  }
+
+  .navbar {
+    text-align: center;
+  }
+}
+
+.pure-paginator {
+  padding-left: 0;
   text-align: center;
 }
 
