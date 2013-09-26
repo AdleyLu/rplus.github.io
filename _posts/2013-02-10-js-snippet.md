@@ -12,7 +12,7 @@ tags : [js,tech-post]
 1.綁定事件(相容)
 
 
-    {% highlight javascript linenos %}
+    {% highlight js %}
     /**
      * addEventListener
      * @param {[string]} evnt [description]
