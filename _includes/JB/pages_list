@@ -33,7 +33,6 @@ Usage:
         {% endif %}
       {% endif %}
     {% endif %}
-  	<li><a href="#test">test</a></li>
   {% endfor %}
 {% endif %}
 {% assign pages_list = nil %}
