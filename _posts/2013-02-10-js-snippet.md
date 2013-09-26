@@ -11,6 +11,8 @@ tags : [js,tech-post]
 
 1.綁定事件(相容)
 
+
+    {% highlight java %}
     /**
      * addEventListener
      * @param {[string]} evnt [description]
@@ -27,3 +29,4 @@ tags : [js,tech-post]
            elem[evnt] = func;
         }
     }
+    {% endhighlight %}
