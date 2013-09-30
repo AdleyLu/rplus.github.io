@@ -105,12 +105,20 @@ a {
         padding-bottom: 0;
       }
     }
-    li a {
-      border-bottom: 3px solid transparent;
-      &:hover, &:active {
-        border-bottom-color: $navBorderColor;
-        color: #000;
-        text-shadow: 1px 1px 0 rgba(255,0,0,0.3);
+    %navFocusA {
+      color: #000;
+      text-shadow: 1px 1px 0 rgba(255,0,0,0.3);
+    }
+    li {
+      &.active a {
+        @extend %navFocusA;
+      }
+      a {
+        border-bottom: 3px solid transparent;
+        &:hover, &:active {
+          border-bottom-color: $navBorderColor;
+          @extend %navFocusA;
+        }
       }
     }
   }
