@@ -4,7 +4,9 @@
 
 <div class="page-body">
   <article class="page-content">
+
     {{ content }}
+
     <ul class="pure-paginator">
     {% if page.previous %}
       <li><a class="pure-button prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">◀ Previous</a></li>
@@ -18,7 +20,9 @@
       <li><a class="pure-button next disabled">Next ▶</a>
     {% endif %}
     </ul>
+
     <div class="comment">{% include JB/comments %}</div>
+
   </article>
 
   <label for="sidebar-ctrl" class="sidebar-controler">≡</label>
