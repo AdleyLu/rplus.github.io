@@ -11,7 +11,6 @@ tags : [js,tech-post]
 
 1.綁定事件(相容)
 
-
     {% highlight js %}
     /**
      * addEventListener

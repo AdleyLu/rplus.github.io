@@ -14,15 +14,18 @@ tags : [js,tech-post,css3]
 
 CSS:
 
+    {% highlight css %}
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none; /* IE 10 */
     user-select: none;
+    {% endhighlight %}
 
 JavaScript:
 
+    {% highlight js %}
     document.onselectstart = function() { return false; }
     document.onmousedown = function() { return false; }
 
@@ -39,6 +42,7 @@ JavaScript:
     }
 
     makeUnselectable(document.getElementById("foo"));
+    {% endhighlight %}
 
 *************
 ref:
