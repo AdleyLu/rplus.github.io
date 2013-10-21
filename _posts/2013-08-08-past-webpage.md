@@ -3,7 +3,7 @@ layout: post
 title: 過去的小作品
 category : work
 tagline: ""
-tags : [work, demo]
+tags : [work, demo, js, jquery, ajax]
 ---
 {% include JB/setup %}
 

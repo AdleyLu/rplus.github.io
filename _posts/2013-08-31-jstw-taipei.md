@@ -3,7 +3,7 @@ layout: post
 title: JSTW @ taipei
 category : action
 tagline: ""
-tags : [action]
+tags : [action, js, regexp]
 ---
 {% include JB/setup %}
 
@@ -75,3 +75,10 @@ tags : [action]
 
     `text.replce(/[a]+/, function(match){ console.log(match) })`
 
+
+---
+
+### ref link:
+
++ [正規表示式 | wikipedia](http://zh.wikipedia.org/zh-tw/正则表达式)
++ [Regular Expressions | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
