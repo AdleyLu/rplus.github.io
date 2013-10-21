@@ -28,6 +28,17 @@
     <link rel="apple-touch-icon" sizes="114x114" href="{{ BASE_PATH }}/images/favicon/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="144x144" href="{{ BASE_PATH }}/images/favicon/apple-touch-icon-144x144.png">
 
+    <link rel="start" href="/">
+
+    <link rel="contents" href="{{ BASE_PATH }}/archive.html">
+    {% if page.previous %}
+    <link rel="prev" href="{{ BASE_PATH }}{{ page.prev.url }}" title="{{ page.prev.title }}">
+    {% endif %}
+
+    {% if page.next %}
+    <link rel="next" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">
+    {% endif %}
+
   </head>
 
   <body>
