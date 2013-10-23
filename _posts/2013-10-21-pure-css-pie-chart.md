@@ -16,6 +16,8 @@ tags : [css, sass]
 > 但其實我覺得作者 gif 用得不錯呀~  
 他都寫明了平時很多時間都在處理 IE 相容問題上，在 IE 相容下，  
 用 gif 雖然比較 low 一點，但對於技能偏視覺的人來說，這是快又狠的招式呀~  
+而且 gif / css3-animation / jQuery-animate / canvas(by jQuery plugin)  
+這完完全全是在解釋他能夠 fallback IE 各種討人厭的動畫效果
 只是他的 tag命名 跟 圖檔名是可以加強些啦~
 
 看到作者的技能圓圈是用 canvas 作的，  
@@ -54,6 +56,17 @@ DOM 用到兩層，但若是改寫一下，可以用 `:pseudo` 來達成單層 D
 不看那些幅射線背景的話，這一方法的靈活性更大一點!!  
 但是 `skewY` 後的平行四邊形有點大，需要限縮一下  
 ps: 不能超過 半圓
+
+## 第四種
+[background-image by css3](http://codepen.io/ryanmcnz/pen/GlnJa)
+
+以下開放非 css 的 pie chart
+
+## 第五種
+canvas
+
+## 第六種
+svg
 
 ---
 
