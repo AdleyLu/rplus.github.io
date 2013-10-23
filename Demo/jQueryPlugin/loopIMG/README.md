@@ -1,0 +1,1 @@
+demo link: <http://rplus.github.io/Demo/jQueryPlugin/loopIMG/loopImg.html>
