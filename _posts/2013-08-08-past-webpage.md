@@ -13,7 +13,7 @@ tags : [work, demo, js, jquery, ajax]
 + [完形擬動畫](http://rplus.github.io/Gestalttheorie/)
 
 + [loopIMG](http://rplus.github.io/Demo/jQueryPlugin/loopIMG/loopImg.html)  
-    jq-plugin
+    半成品. jq-plugin
 
 ### 2012.06 ~ 2013.08
 + [BBplay](https://googledrive.com/host/0B6MUl4JFkRfleHhObzJwODl4ejQ/)
