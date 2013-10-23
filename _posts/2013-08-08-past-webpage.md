@@ -7,6 +7,14 @@ tags : [work, demo, js, jquery, ajax]
 ---
 {% include JB/setup %}
 
++ [東吳末年傳 - MOD](http://rplus.github.io/the-end-of-the-Eastern-Wu-dynasty/)  
+    jsonp, js-template, google-form-data
+
++ [完形擬動畫](http://rplus.github.io/Gestalttheorie/)
+
++ [loopIMG](http://rplus.github.io/Demo/jQueryPlugin/loopIMG/loopImg.html)  
+    jq-plugin
+
 ### 2012.06 ~ 2013.08
 + [BBplay](https://googledrive.com/host/0B6MUl4JFkRfleHhObzJwODl4ejQ/)
     * 使用 json 取資料，原本是 php 吐值，因無後端環境，便改成 json files

@@ -16,8 +16,8 @@ tags : [css, sass]
 > 但其實我覺得作者 gif 用得不錯呀~  
 他都寫明了平時很多時間都在處理 IE 相容問題上，在 IE 相容下，  
 用 gif 雖然比較 low 一點，但對於技能偏視覺的人來說，這是快又狠的招式呀~  
-而且 gif / css3-animation / jQuery-animate / canvas(by jQuery plugin)  
-這完完全全是在解釋他能夠 fallback IE 各種討人厭的動畫效果
+而且 gif / css3-animation / jQuery-animate / canvas(by jQuery plugin) 都有用到哩  
+這完完全全是在解釋他能夠 fallback IE 各種討人厭的動畫效果  
 只是他的 tag命名 跟 圖檔名是可以加強些啦~
 
 看到作者的技能圓圈是用 canvas 作的，  
