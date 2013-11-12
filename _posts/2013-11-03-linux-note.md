@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Linux
+title: Linux 學習筆計
 category : tech
-tagline: svg noting
-tags : [svg]
+tagline: 我在 linux 碰的石頭 orz
+tags : [linux, os]
 ---
 {% include JB/setup %}
 
@@ -13,3 +13,10 @@ tags : [svg]
         以 [input helper](https://github.com/xgenvn/InputHelper) 暫時處理  
         (MD好難打呀~~~  而且又常常按到 Esc...  
         打整串的字就這樣不見了 囧rz)
+    + 待解問題
+        + 中文 fallback
+
++ Git
+    + 昔 windows 系統的 CRLF 問題，fixed by [保哥](http://blog.miniasp.com/post/2013/09/15/Git-for-Windows-Line-Ending-Conversion-Notes.aspx)
+    + [私鑰: 昔 ppk 轉 openssh](http://pobing.iteye.com/blog/1520151)
+    + [公鑰](https://help.github.com/articles/error-permission-denied-publickey)

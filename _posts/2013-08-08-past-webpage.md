@@ -17,7 +17,8 @@ tags : [work, demo, js, jquery, ajax]
 
 ### 2012.06 ~ 2013.08
 + [BBplay](https://googledrive.com/host/0B6MUl4JFkRfleHhObzJwODl4ejQ/)
-    * 使用 json 取資料，原本是 php 吐值，因無後端環境，便改成 json files
+    * 使用 json 取資料，原始頁採 php 吐值， 
+      因 demo 無後端環境，遂改成 json files 替之。
     * script template + json-object replace function: 模版化
     * 圖片壓縮 + progressive jpg
 
