@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linux 學習筆計
+title: Linux 學習筆記
 category : tech
 tagline: 我在 linux 碰的石頭 orz
 tags : [linux, os]

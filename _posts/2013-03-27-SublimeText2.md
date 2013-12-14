@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sublime Text 2 note
+title: Sublime Text note
 category : note
 tagline: ""
 tags : [sublime, notw]
 ---
 {% include JB/setup %}
 
-### 一些關於Sublime text 2 的筆記及設定
+### 一些關於 Sublime text 的筆記及設定
 
 #### 設定 profile
 
@@ -18,7 +18,8 @@ tags : [sublime, notw]
     "bold_folder_labels": true,         // 資料夾粗體顯示
     "highlight_modified_tabs": true,    // 異動檔標示
     "draw_white_space": "selection",    // 選取時顯示空白
-    "word_wrap": "true"
+    "word_wrap": "true",
+    "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "node_modules"], // 加入忽略 grunt node_module
 
 
 #### 快速鍵 keybind

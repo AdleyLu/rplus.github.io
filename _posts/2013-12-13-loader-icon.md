@@ -32,8 +32,8 @@ tags : [css]
 css 要華麗的話，大概要混著用 漸層背景 或是 box-shadow 吧
 
 ### nice pens:
-每個字都在動的 loading 真的超帥的~~  
-而且顏色好柔呀~~ 感覺都要跟著飄起來了~  
+每個字都在動的 loading 真的超帥的~  
+而且顏色好柔呀~ 感覺都要跟著飄起來了~  
 <http://codepen.io/diegopardo/pen/dGlfC>
 
 硬派動畫: 一格一格算 XD  
