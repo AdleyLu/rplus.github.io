@@ -3,7 +3,7 @@ layout: post
 title: pure css pie chart
 category : demo
 tagline: css 弧形
-tags : [css, sass]
+tags : [css, sass, demo]
 ---
 {% include JB/setup %}
 

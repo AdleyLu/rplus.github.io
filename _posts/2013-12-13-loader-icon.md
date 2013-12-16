@@ -3,7 +3,7 @@ layout: post
 title: loader icon 學習
 category : tech
 tagline: 神奇 icon 火力大開~
-tags : [css]
+tags : [css, demo]
 ---
 {% include JB/setup %}
 
