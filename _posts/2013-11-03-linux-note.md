@@ -28,3 +28,11 @@ tags : [linux, os]
         @ /etc/lightdm/lightdm.conf
         ---
         autologin-user=YourDesiredAutoLoginUserName
+
+### xfce
+
++ hotkey
+    + [控制音量](http://ubuntuforums.org/archive/index.php/t-1150976.html)：
+
+            amixer set Master playback 3dB-
+            amixer set Master playback 0%
