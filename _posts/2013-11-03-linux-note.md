@@ -17,7 +17,10 @@ tags : [linux, os]
         + 中文 fallback:
 
 + Git
-    + 昔 windows 系統的 CRLF 問題，fixed by [保哥](http://blog.miniasp.com/post/2013/09/15/Git-for-Windows-Line-Ending-Conversion-Notes.aspx)
+    + 昔 windows 系統的 CRLF 問題，fixed by [保哥](http://blog.miniasp.com/post/2013/09/15/Git-for-Windows-Line-Ending-Conversion-Notes.aspx)  
+        [dos2unix](http://linuxcommand.org/man_pages/dos2unix1.html): CRLF <> LF  
+        [via](http://superuser.com/a/52046)
+
     + [私鑰: 昔 ppk 轉 openssh](http://pobing.iteye.com/blog/1520151)
     + [公鑰](https://help.github.com/articles/error-permission-denied-publickey)
 
@@ -36,3 +39,14 @@ tags : [linux, os]
 
             amixer set Master playback 3dB-
             amixer set Master playback 0%
+
+    + [xautomation](http://hoopajoo.net/projects/xautomation.html)  
+        模擬部份鍵盤 / 滑鼠行為, [commend list](http://manpages.ubuntu.com/manpages/jaunty/man1/xte.1.html)
+
+            xte 'keydown Control_L' 'key T' 'key V' 'keyup Control_L' 'key Return'
+
++ system monitor
+    + terminal:
+        + `top`: 內建的 monitor table
+        + `htop`: 在 terminal 內執行，但可點擊，強化的 top
+        + `nmon`: 
