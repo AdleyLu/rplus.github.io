@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Sublime Text note
-category : note
+category : [note, software]
 tagline: "一些關於 Sublime text 的筆記及設定"
-tags : [sublime, notw]
+tags : [sublime, note]
 ---
 {% include JB/setup %}
 
