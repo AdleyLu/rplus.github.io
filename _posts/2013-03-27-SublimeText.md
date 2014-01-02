@@ -65,7 +65,7 @@ tags : [sublime, notw]
 大概就像下面這樣，`cmd` 是要在 terminal 上能跑的指令，後面接的都是該指令的參數  
 一些常用的檔案全路徑之類的可以看 sublime doc 的列表來取用  
 
-    ```json
+    {% highlight json %}
     {
       "cmd": ["gedit", "--new-document", "$file"],
       "variants": {
@@ -73,7 +73,7 @@ tags : [sublime, notw]
         "cmd": ["gedit", "--new-window", "$file"]
       }
     }
-    ```
+    {% endhighlight %}
 
 而 `variants` 是拿來 綁快速鍵的, `name` 配對起來後
 用法就像下面的 ref[2]:
