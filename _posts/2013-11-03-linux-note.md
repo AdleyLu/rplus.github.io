@@ -18,8 +18,9 @@ tags : [linux, os]
 
 + Git
     + 昔 windows 系統的 CRLF 問題，fixed by [保哥](http://blog.miniasp.com/post/2013/09/15/Git-for-Windows-Line-Ending-Conversion-Notes.aspx)  
-        [dos2unix](http://linuxcommand.org/man_pages/dos2unix1.html): CRLF <> LF  
-        [via](http://superuser.com/a/52046)
+        + [dos2unix](http://linuxcommand.org/man_pages/dos2unix1.html): CRLF <> LF  
+            [via](http://superuser.com/a/52046)
+        + [Dealing with line endings](https://help.github.com/articles/dealing-with-line-endings)
 
     + [私鑰: 昔 ppk 轉 openssh](http://pobing.iteye.com/blog/1520151)
     + [公鑰](https://help.github.com/articles/error-permission-denied-publickey)

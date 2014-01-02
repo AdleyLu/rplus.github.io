@@ -57,6 +57,36 @@ tags : [sublime, notw]
 
 #### 巨集 macro
 
+#### Build system
+
+參考[這篇](http://sublimetext.userecho.com/topic/61233-build-system-should-allow-run-test-verify-preview-etc/#comment_161062)
+建立一個新的 build, 
+
+大概就像下面這樣，`cmd` 是要在 terminal 上能跑的指令，後面接的都是該指令的參數  
+一些常用的檔案全路徑之類的可以看 sublime doc 的列表來取用  
+
+    ```json
+    {
+      "cmd": ["gedit", "--new-document", "$file"],
+      "variants": {
+        "name": "open_gedit",
+        "cmd": ["gedit", "--new-window", "$file"]
+      }
+    }
+    ```
+
+而 `variants` 是拿來 綁快速鍵的, `name` 配對起來後
+用法就像下面的 ref[2]:
+
+    { "keys": ["ctrl+shift+b"], "command": "build", "args": {"variant": "open_gedit"} }
+
+可以達成多種不同的 build 結果~
+
+ref:
+
++ [Build Systems @ unofficial Doc](http://docs.sublimetext.info/en/latest/reference/build_systems.html)
++ [Build System should allow Run, Test, Verify, Preview, etc. @ Sublime Text → General](http://sublimetext.userecho.com/topic/61233-build-system-should-allow-run-test-verify-preview-etc/#comment_161062)
++ [Build System @ Sublime Text 手冊](http://docs.sublimetext.tw/others/)
 
 #### 使用流程 work flow
 
