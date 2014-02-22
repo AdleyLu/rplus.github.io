@@ -44,8 +44,8 @@ tags : [css, js, ie, polyfill]
     這天殺的 IE 回傳的 scrollHeight 不是 60px 而是 textNode 高度 20px  
     (所以在 IE 要多判斷一次 scrollHeight 是不是小於 height...)
 
-    大概就這樣~
-    中斷頗久才續著寫，好像有些興忘記記下來的感覺  
+    大概就這樣~  
+    中斷頗久才續著寫，好像有些東西忘記記下來的感覺  
     PS：如果 textearea 是在 iframe 裡的話  
     要調整 iframe 的高度通常就是用 postMessage 來當跟 parent-window 的傳話筒  
     有支 jQuery postMessage 的 plugin 可以拿來作 polyfill~
