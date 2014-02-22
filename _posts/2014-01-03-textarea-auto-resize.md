@@ -24,9 +24,10 @@ tags : [css, js, ie, polyfill]
     在 submit 時把字塞進 hidden textarea， 快哉矣~
 
 2. 使用可惡的 textarea
-    ``` javascript
+    {% highlight  %}
     $.on('input propertychange', function() {...});
-    ```
+    {% endhighlight %}
+
     上頭的是偵測 鍵盤輸入的事件  
     印象中 IE 8 跟 9 有一個行為特別詭異，需要多綁 onchange 上去 Orz  
     然後另一個 IE 是不吃 delete 事件 = =...
