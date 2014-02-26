@@ -3,7 +3,7 @@ layout: post
 title: autohotkey 小集
 tagline: windows 的少有眷戀
 category : tech
-tags : [script, auto]
+tags : [script, auto, autohotkey]
 ---
 {% include JB/setup %}
 
