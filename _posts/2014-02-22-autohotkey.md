@@ -35,6 +35,7 @@ tags : [script, auto, autohotkey]
     後來我稍微改寫了一下
 
     {% highlight autohotkey %}
+
         #Persistent
         SetTimer, KillST3popup, 100
         return
@@ -45,6 +46,7 @@ tags : [script, auto, autohotkey]
         {
           WinClose
         }
+
     {% endhighlight %}
 
     讓它每 0.1 秒確認一次 = =
