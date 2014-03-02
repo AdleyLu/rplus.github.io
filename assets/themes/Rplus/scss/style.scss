@@ -336,9 +336,10 @@ $nav-border-color: #F75E5E; // rgba(red, .6)
     }
     input {
         max-width: 100%;
-        padding: .5em .6em;
+        padding: .5em 1em;
         font-size: .8em;
         border: none;
+        box-sizing: border-box;
         background-color: transparent;
         &:focus {
             outline: none;
