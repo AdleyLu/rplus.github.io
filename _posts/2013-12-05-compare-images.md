@@ -10,7 +10,7 @@ tags : [css, svg, polygen, demo]
 ### 心得：
 
 <a href="http://rplus.github.io/before-after-image-compare/assets/">demo</a>:  
-<iframe src="http://rplus.github.io/before-after-image-compare/assets/" width="400" height="650"></iframe>
+<iframe src="http://rplus.github.io/before-after-image-compare/assets/" width="400" height="650"> </iframe>
 
 github page:  
 [before-after-image-compare](https://github.com/Rplus/before-after-image-compare)
@@ -37,7 +37,7 @@ PS： 有些設定其實不太確定該放 css 還是 js 參數 = = 屆時有需
 但還是想說先瞭解一下原生寫法好了，而且對 SVG 的語法瞭解並不深入呀~~~ = ="
 
 這是第一次使用 Class function 來兜東西  
-Class function 寫起來還有些趣味，不過尚未體會該怎麼把它寫得更強撼些  
+Class function 寫起來還有些趣味，不過尚未體會該怎麼把它寫得更強悍些  
 像是 this.XXX 傳出來的東西 感覺好像可以跟外界有更多的動態影響~
 只是 coder 還是我，寫出來的東西看起來還是跟以前的寫法差不多破爛就是了 XDD
 
@@ -45,7 +45,7 @@ Class function 寫起來還有些趣味，不過尚未體會該怎麼把它寫�
 
 0. pure html:  
     需要兩張圖皆出現
-    .box > figure*2 > img
+    .box > figure\*2 > img
 
 1. +css:  
     需要兩張圖皆完全出現 > img

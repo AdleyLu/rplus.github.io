@@ -16,8 +16,8 @@ tags : [js,tech-post,css,split,setInterval,demo]
 查了一下，原來是 `backgroundPositionX` 是 MSIE，而非標準用法(但其實我覺得很好用呀 = =a)  
 遂改用 `backgroundPosition`， Firefox 就能正常跳舞了~~
 
-<pre class="codepen" data-height="300" data-type="result" data-href="mJIdw" data-user="Rplus" data-safe="false"><code>test</code><a href="http://codepen.io/Rplus/pen/mJIdw">Check out this Pen!</a></pre>
-<script async src="http://codepen.io/assets/embed/ei.js"></script>
+<p data-height="268" data-theme-id="0" data-slug-hash="vjhHK" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/Rplus/pen/vjhHK'>test: youtube gangnam style dancing logo</a> by Rplus (<a href='http://codepen.io/Rplus'>@Rplus</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async="" src="//codepen.io/assets/embed/ei.js"> </script>
 
 ###Demo Link:
 <http://rplus.github.com/Demo/Youtube Yoodle/youtube.html>

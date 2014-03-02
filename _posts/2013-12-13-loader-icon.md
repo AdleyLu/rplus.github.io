@@ -13,7 +13,7 @@ tags : [css, demo]
 [simple css loader @ codepen](http://codepen.io/Rplus/pen/wigKC) :
 
 <p data-height="268" data-theme-id="0" data-slug-hash="wigKC" data-user="Rplus" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/Rplus/pen/wigKC'>simple css loader</a> by Rplus (<a href='http://codepen.io/Rplus'>@Rplus</a>) on <a href='http://codepen.io'>CodePen</a></p>
-<script async src="http://codepen.io/assets/embed/ei.js"></script>
+<script async="" src="http://codepen.io/assets/embed/ei.js"> </script>
 
 後來看了一小圈後發現
 使用單一 element 去刻圖示的有大部份都使用了 多重box-shadow 去控制  

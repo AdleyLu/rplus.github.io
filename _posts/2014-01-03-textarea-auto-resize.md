@@ -24,25 +24,24 @@ tags : [css, js, ie, polyfill]
     在 submit 時把字塞進 hidden textarea， 快哉矣~
 
 2. 使用可惡的 textarea
-    {% highlight  %}
-    $.on('input propertychange', function() {...});
-    {% endhighlight %}
+
+        $.on('input propertychange', function() {...});
 
     上頭的是偵測 鍵盤輸入的事件  
     印象中 IE 8 跟 9 有一個行為特別詭異，需要多綁 onchange 上去 Orz  
     然後另一個 IE 是不吃 delete 事件 = =...
     (Let it go~ Let it go~)
 
-    偵測 textarea 的高度不能用 height, 因為高度預設是不會動的  
-    要算內部的捲動高度： scrollHeight  
-    只要判斷一下 scrollHeight 大於 height 時去調整 height 即可快樂地結束這一回合 (?
+    偵測 textarea 的高度不能用 `height`, 因為高度預設是不會動的  
+    要算內部的捲動高度： `scrollHeight`  
+    只要判斷一下 `scrollHeight` 大於 `height` 時去調整 `height` 即可快樂地結束這一回合 (?
 
     BUT,  
     IE 是有很多陷阱卡的 Orz  
-    某個版本的 IE 對 textarea scrollHeight 的定義非常神奇，  
+    某個版本的 IE 對 textarea `scrollHeight` 的定義非常神奇，  
     假如你一行字只有 20px 高， 你的 textarea 初始高度設為 60px，  
-    這天殺的 IE 回傳的 scrollHeight 不是 60px 而是 textNode 高度 20px  
-    (所以在 IE 要多判斷一次 scrollHeight 是不是小於 height...)
+    這天殺的 IE 回傳的 `scrollHeight` 不是 60px 而是 textNode 高度 20px  
+    (所以在 IE 要多判斷一次 `scrollHeight` 是不是小於 `height`...)
 
     大概就這樣~  
     中斷頗久才續著寫，好像有些東西忘記記下來的感覺  
