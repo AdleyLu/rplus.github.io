@@ -390,15 +390,22 @@ footer {
 
 .p-tag,
 .p-category {
+    position: relative;
     .anchor {
         @extend %anchor-link;
+        position: relative;
+        z-index: 1;
         &:before {
             content: '⚓ ';
         }
     }
     .back-to-top {
         display: none;
-        float: right;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: right;
         padding: 0 .5em;
         &:after {
             content: '▲';
