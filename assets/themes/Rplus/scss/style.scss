@@ -445,3 +445,12 @@ footer {
         @include text-align-left(3.5em);
     }
 }
+
+.rplus-icon {
+    display: block;
+    img {
+        max-width: 100%;
+        width: 200px;
+        display: block;
+    }
+}
