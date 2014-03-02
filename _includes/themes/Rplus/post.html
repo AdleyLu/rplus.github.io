@@ -13,11 +13,10 @@
       {{ content }}
     </article>
 
-    <ul class="pure-g-r paginator">
+    <ul class="paginator">
       {% if page.previous %}
-      <li class="pure-u-1-2 paginator-prev">
-        <a class="prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}" rel="prev">
-          <i class="icon-chevron-left"></i>
+      <li class="paginator--prev">
+        <a class="paginator--prev__link" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}" rel="prev">
           {{ page.previous.title }}
         </a>
       </li>
@@ -25,10 +24,9 @@
 
 
       {% if page.next %}
-      <li class="pure-u-1-2 paginator-next">
-        <a class="next" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">
+      <li class="paginator--next">
+        <a class="paginator--next__link" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">
           {{ page.next.title }}
-          <i class="icon-chevron-right"></i>
           <!-- <i class="icon-chevron-sign-right"></i> -->
         </a>
       </li>
@@ -38,59 +36,4 @@
     <div class="comment">{% include JB/comments %}</div>
 
   </section>
-
-
-  <label for="sidebar-ctrl" class="sidebar-controler">≡</label>
-  <input id="sidebar-ctrl" type="checkbox">
-
-  <aside class="page-sidebar">
-    <!-- <h4>Published</h4> -->
-    <!-- <time class="date" datetime="{{ page.date }}">{{ page.date | date_to_long_string }}</time> -->
-
-    <form class="pure-form search" action="http://google.com/search" method="get" target="_blank">
-      <input type="hidden" name="sitesearch" value="{{ site.production_url }}" />
-      <input type="text" class="pure-input" name="q" placeholder="Search by Google">
-      <button type="submit">
-        <i class="icon-search"></i>
-      </button>
-    </form>
-
-    <h4>
-      <time class="date" datetime="{{ page.date }}">{{ page.date | date: "%Y-%m-%d" }}</time>
-    </h4>
-
-    <section>
-    {% unless page.categories == empty %}
-      <h4>Categories</h4>
-      <ul class="categories-list">
-        {% assign categories_list = page.categories %}
-        {% include JB/categories_list %}
-      </ul>
-    {% endunless %}
-    </section>
-
-    <section>
-    {% unless page.tags == empty %}
-      <h4>Tags</h4>
-      <ul class="tag-list">
-      {% assign tags_list = page.tags %}
-      {% include JB/tags_list %}
-      </ul>
-    {% endunless %}
-    </section>
-
-    <section>
-      <h4>Post list</h4>
-      <ul class="posts-list">
-        {% for post in site.posts %}
-          <li><a href="{{ BASE_PATH }}{{ post.url }}" title="{{ page.date | date: "%Y-%m-%d" }}">{{ post.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </section>
-
-    <section>
-      <h4>About R+</h4>
-    </section>
-
-  </aside>
 </div>
