@@ -1,0 +1,463 @@
+/*
+ ######  ######## ########  ##     ##  ######  ######## ##     ## ########  ########
+##    ##    ##    ##     ## ##     ## ##    ##    ##    ##     ## ##     ## ##
+##          ##    ##     ## ##     ## ##          ##    ##     ## ##     ## ##
+ ######     ##    ########  ##     ## ##          ##    ##     ## ########  ######
+      ##    ##    ##   ##   ##     ## ##          ##    ##     ## ##   ##   ##
+##    ##    ##    ##    ##  ##     ## ##    ##    ##    ##     ## ##    ##  ##
+ ######     ##    ##     ##  #######   ######     ##     #######  ##     ## ########
+*/
+body {
+    max-width: 65em;
+    margin: 0 auto;
+}
+
+// main style
+.container {
+    background-color: #fff;
+    padding-top: 1px;
+    padding-bottom: 2em;
+    box-shadow: 0 0 3px 1px #ccc;
+    position: relative;
+    @extend %cf;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5em;
+        background-color: #fff1e8;
+    }
+
+    .content {
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+        @include atbp {
+            float: left;
+            width: 75%;
+        }
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    hr {
+        border: 5px dashed #ccc;
+    }
+}
+
+.page-header {
+
+    small {
+        color: #aaa;
+        font-weight: 100;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+
+.page-content {
+
+    ul, ol {
+        $li-border-color: hsl(5, 100%, 97%);
+
+        @include rem-fallback(padding-left, 20);
+        border-left: 10px solid $li-border-color;
+
+        ul, ol {
+            border-left-color: darken($li-border-color, 1%);
+
+            ul, ol {
+                border-left-color: darken($li-border-color, 2%);
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    font-size: small;
+}
+
+
+
+
+
+/*
+##    ##    ###    ##     ##    ########     ###    ########
+###   ##   ## ##   ##     ##    ##     ##   ## ##   ##     ##
+####  ##  ##   ##  ##     ##    ##     ##  ##   ##  ##     ##
+## ## ## ##     ## ##     ##    ########  ##     ## ########
+##  #### #########  ##   ##     ##     ## ######### ##   ##
+##   ### ##     ##   ## ##      ##     ## ##     ## ##    ##
+##    ## ##     ##    ###       ########  ##     ## ##     ##
+*/
+
+$nav-border-color: #F75E5E; // rgba(red, .6)
+
+%nav-padding {
+    @include rem-fallback(padding, 5, 20);
+}
+
+.nav-bar {
+    @include rem-fallback(margin-bottom, 20);
+    text-align: center;
+    @include atbp() {
+        text-align: left;
+
+        h1 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    h1 {
+        @extend %nav-padding;
+        margin: 0;
+        font-size: 1.4em;
+        background-color: rgba(red, .1);
+
+        a {
+            padding: 0 20px;
+        }
+    }
+
+    a {
+        display: block;
+        color: #777;
+        &:hover {
+            text-decoration: none;
+            color: #900;
+        }
+    }
+}
+
+
+    %active-tab {
+        color: #000;
+        text-shadow: 1px 1px 0 rgba(red, .3);
+    }
+    .nav__menu {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid $nav-border-color;
+
+        li {
+            display: inline-block;
+            list-style-type: none;
+            &.active a {
+                @extend %active-tab;
+                border-bottom-color: $nav-border-color;
+            }
+        }
+
+        a {
+            @extend %nav-padding;
+            border-bottom: 3px solid transparent;
+            &:hover {
+                @extend %active-tab;
+            }
+        }
+    }
+
+
+
+
+
+/*
+########     ###     ######   #### ##    ##    ###    ########  #######  ########
+##     ##   ## ##   ##    ##   ##  ###   ##   ## ##      ##    ##     ## ##     ##
+##     ##  ##   ##  ##         ##  ####  ##  ##   ##     ##    ##     ## ##     ##
+########  ##     ## ##   ####  ##  ## ## ## ##     ##    ##    ##     ## ########
+##        ######### ##    ##   ##  ##  #### #########    ##    ##     ## ##   ##
+##        ##     ## ##    ##   ##  ##   ### ##     ##    ##    ##     ## ##    ##
+##        ##     ##  ######   #### ##    ## ##     ##    ##     #######  ##     ##
+*/
+
+
+.paginator {
+    padding: 10px 0;
+    margin: 3em 0em;
+    border-top: 1px dashed #999;
+    border-bottom: 1px dashed #999;
+    border-left: none;
+
+    a {
+        padding: 5px 10px;
+        display: block;
+        &:hover {
+            text-decoration: none;
+            background-color: rgba(blue, .1);
+        }
+    }
+
+    li {
+        list-style-type: none;
+    }
+}
+    .paginator--next {
+        text-align: right;
+        a:after {
+            content: '»';
+        }
+    }
+    .paginator--prev {
+        a:before {
+            content: '«';
+        }
+    }
+
+
+
+
+
+/*
+ ######  #### ########  ######## ########     ###    ########
+##    ##  ##  ##     ## ##       ##     ##   ## ##   ##     ##
+##        ##  ##     ## ##       ##     ##  ##   ##  ##     ##
+ ######   ##  ##     ## ######   ########  ##     ## ########
+      ##  ##  ##     ## ##       ##     ## ######### ##   ##
+##    ##  ##  ##     ## ##       ##     ## ##     ## ##    ##
+ ######  #### ########  ######## ########  ##     ## ##     ##
+ */
+
+.page-sidebar {
+    position: fixed;
+    z-index: 1;
+    top: 5%;
+    right: -100%;
+    max-width: 90%;
+    max-height: 90%;
+    transition: right .5s;
+    box-shadow: 0 0 7px 3px #999;
+    border-radius: 10px 0 0 10px;
+    background-color: #fff;
+
+    @include atbp {
+        position: static;
+        overflow: hidden;
+        padding-top: 1em;
+        box-shadow: none;
+    }
+
+
+    ul {
+        list-style-type: square;
+        @include rem-fallback(padding-left, 30);
+    }
+
+    h4 {
+        background-color: #eee;
+        margin-bottom: 0;
+        @include rem-fallback(padding-left, 5);
+        border-left: 10px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+
+    > h4:first-child {
+        margin-top: 0;
+    }
+}
+
+.sidebar-controler {
+    display: block;
+    position: fixed;
+    @include rem-fallback(top, 100);
+    right: 0;
+    z-index: 2;
+    font-size: 3em;
+    cursor: pointer;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    text-align: center;
+    background-color: #ddd;
+    background-color: rgba(0, 0, 0, .1);
+    opacity: .7;
+    color: #999;
+    transition: all .5s;
+    @include atbp {
+        display: none;
+    }
+    &:hover {
+        color: #333;
+        background-color: #cdc;
+        background-color: rgba(0, 125, 0, .2);
+    }
+
+    #sidebar-ctrl:checked ~ & {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+    #sidebar-ctrl {
+        display: none;
+        &:checked ~ .page-sidebar {
+            right: 0;
+        }
+    }
+
+
+.search {
+    position: relative;
+    margin-left: 2%;
+    margin-top: 1em;
+    overflow: hidden;
+    max-width: 95%;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    box-shadow: inset 0 1px 3px #ddd;
+    transition: all .5s;
+    background-color: darken(#fff, 2%);
+    &:hover {
+        border-color: #129fea;
+        background-color: #fff;
+    }
+
+    input {
+        max-width: 100%;
+        padding: .5em 1em;
+        font-size: .8em;
+        border: none;
+        background-color: transparent;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+        display: block;
+        width: 2em;
+        height: 2em;
+        border: none;
+        background-color: #ddd;
+        font-weight: 900;
+        &:before {
+            content: 'Q';
+            position: absolute;
+            top: 10%;
+            left: 30%;
+        }
+        &:hover {
+            background-color: #ccc;
+        }
+    }
+
+}
+
+
+
+/*
+ #######  ######## ##     ## ######## ########
+##     ##    ##    ##     ## ##       ##     ##
+##     ##    ##    ##     ## ##       ##     ##
+##     ##    ##    ######### ######   ########
+##     ##    ##    ##     ## ##       ##   ##
+##     ##    ##    ##     ## ##       ##    ##
+ #######     ##    ##     ## ######## ##     ##
+*/
+
+.comment {
+    width: 90%;
+    margin: 20px auto;
+}
+
+
+
+.tag_box {
+    -moz-column-count:3;
+    -webkit-column-count:3;
+    column-count:3;
+}
+
+.p-tag,
+.p-category {
+    position: relative;
+    &:target .back-to-top {
+        display: block;
+    }
+
+    .anchor {
+        @extend %anchor-link;
+        position: relative;
+        z-index: 1;
+        &:before {
+            content: '⚓ ';
+        }
+    }
+
+    .back-to-top {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: right;
+        padding: 0 .5em;
+        &:after {
+            content: '▲';
+        }
+    }
+}
+
+.p-archive-year  {
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+    border-bottom: 3px dashed #ddd;
+
+    a {
+        @extend %anchor-link;
+    }
+}
+.p-archive-month {
+    margin-left: 1em;
+    margin-bottom: 0;
+
+    a {
+        @extend %anchor-link;
+    }
+}
+.p-archive-date  {
+    list-style-type: square;
+    @include text-align-left(2em);
+
+    .date {
+        color: #999;
+    }
+}
+.p-archive-posts {
+    margin-top: 0;
+    margin-left: 1.8em;
+    padding-left: .7em;
+    border-left: .5em solid #ddd;
+}
+
+.index-posts {
+
+    li {
+        @include text-align-left(3.5em);
+    }
+}
+
+.rplus-icon {
+    display: block;
+
+    img {
+        max-width: 100%;
+        width: 200px;
+        display: block;
+    }
+}

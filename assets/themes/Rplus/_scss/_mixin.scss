@@ -1,0 +1,126 @@
+// ref: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@mixin atbp($w: 53em) {
+    @if $supportIE8 {
+        @content;
+    }
+    @else {
+        @media (min-width: $w) {
+            @content;
+        }
+    }
+}
+
+@mixin rem-fallback($property, $values...) {
+    $max: length($values);
+    $pxValues: '';
+    $remValues: '';
+
+    @for $i from 1 through $max {
+        $value: strip-unit(nth($values, $i));
+        $pxValues: #{$pxValues + $value}px;
+
+        @if $i < $max {
+            $pxValues: #{$pxValues + " "};
+        }
+    }
+
+    @for $i from 1 through $max {
+        $value: strip-unit(nth($values, $i));
+        $remValues: #{$remValues + ($value / 16)}rem;
+
+        @if $i < $max {
+            $remValues: #{$remValues + " "};
+        }
+    }
+
+    @if $supportIE8 {
+        #{$property}: $pxValues;
+    }
+    #{$property}: $remValues;
+}
+
+@mixin text-align-left ($len: 0) {
+    padding-left: $len;
+    text-indent: (- $len);
+}
+
+
+///////////
+
+%anchor-link {
+    color: #900;
+}
+
+%cf {
+    &:after {
+        clear: both;
+        display: table;
+        content: '';
+    }
+}
+
+/*
+########  ########  ######  ######## ########
+##     ## ##       ##    ## ##          ##
+##     ## ##       ##       ##          ##
+########  ######    ######  ######      ##
+##   ##   ##             ## ##          ##
+##    ##  ##       ##    ## ##          ##
+##     ## ########  ######  ########    ##
+*/
+
+
+body {
+    color: #333;
+    line-height: 1.5;
+    background-color: #EEE;
+}
+    blockquote {
+        margin: 1em 1.6em 1em .6em;
+        padding: .7em 10px .7em 40px;
+        border-left: 10px solid #DDF;
+        background: #EEF;
+        position: relative;
+        quotes: "\201C""\201D""\2018""\2019";
+        p {
+            display: inline;
+        }
+    }
+    blockquote:before {
+        content: "\201C";
+        position: absolute;
+        left: 5px;
+        top: 20px;
+        z-index: 1;
+        margin-right: .25em;
+        vertical-align: -.4em;
+        color: #DDF;
+        font-size: 3em;
+        font-weight: 900;
+        line-height: .1em;
+    }
+
+a {
+    color: #08C;
+    text-decoration: none;
+    &:hover {
+        color: #058;
+        text-decoration: underline;
+    }
+}
+
+:target {
+    background-color: #FEFECB;
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: rgba(#ccf, .7);
+}
