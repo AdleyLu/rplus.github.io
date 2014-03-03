@@ -50,4 +50,23 @@ tags : [linux, os]
     + terminal:
         + `top`: 內建的 monitor table
         + `htop`: 在 terminal 內執行，但可點擊，強化的 top
-        + `nmon`: 
+        + `nmon`:
+
++ terminal:
+    + oh-my-zsh:
+
+            # @ /home/r/.zshrc
+            ZSH_THEME="simple"
+
+            # @ simple.zsh-theme
+            PROMPT='%{$fg[cyan]%}%~%{$fg_bold[green]%} $(git_prompt_info)%{$reset_color%}
+            %{$fg[yellow]%}$%{$reset_color%} '
+
+            ZSH_THEME_GIT_PROMPT_PREFIX="("
+            ZSH_THEME_GIT_PROMPT_SUFFIX=")"
+            ZSH_THEME_GIT_PROMPT_DIRTY=" ✗"
+            ZSH_THEME_GIT_PROMPT_CLEAN=" ✔"
+
+            # change folder color
+            export LS_COLORS='ow=1;;42'
+
