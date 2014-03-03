@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sublime Text note
-category : [note, software]
+category : tools
 tagline: "一些關於 Sublime text 的筆記及設定"
 tags : [sublime, note]
 ---
