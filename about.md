@@ -11,4 +11,4 @@ web front-end developer
 + [github.com/Rplus](//github.com/Rplus)
 + [fb.me/rplus.tw](//fb.me/Rplus.tw)
 
-![Rplus personal icon](//rawgithub.com/Rplus/R-logo/master/R+.svg "Rplus personal icon")
+![Rplus personal icon](//rawgithub.com/Rplus/R-logo/v4/R+.svg "Rplus personal icon")
