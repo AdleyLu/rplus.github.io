@@ -28,7 +28,7 @@ tags : [css, js, ie, polyfill]
         $.on('input propertychange', function() {...});
 
     上頭的是偵測 鍵盤輸入的事件  
-    印象中 IE 8 跟 9 有一個行為特別詭異，需要多綁 onchange 上去 Orz  
+    印象中 IE 8 跟 9 有一個行為特別詭異，需要多綁 `onchange` 上去 Orz  
     然後另一個 IE 是不吃 delete 事件 = =...
     (Let it go~ Let it go~)
 
@@ -46,8 +46,8 @@ tags : [css, js, ie, polyfill]
     大概就這樣~  
     中斷頗久才續著寫，好像有些東西忘記記下來的感覺  
     PS：如果 textearea 是在 iframe 裡的話  
-    要調整 iframe 的高度通常就是用 postMessage 來當跟 parent-window 的傳話筒  
-    有支 jQuery postMessage 的 plugin 可以拿來作 polyfill~
+    要調整 iframe 的高度通常就是用 `postMessage` 來當跟 parent-window 的傳話筒  
+    有支 jQuery `postMessage` 的 plugin 可以拿來作 polyfill~
 
 ---
 

@@ -9,7 +9,8 @@ tags : [css, svg, polygen, demo]
 
 ### 心得：
 
-<a href="http://rplus.github.io/before-after-image-compare/assets/">demo</a>:  
+<a href="http://rplus.github.io/before-after-image-compare/assets/">demo</a>:
+
 <iframe src="http://rplus.github.io/before-after-image-compare/assets/" width="400" height="650"> </iframe>
 
 github page:  

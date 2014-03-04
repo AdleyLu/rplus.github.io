@@ -80,5 +80,5 @@ tags : [action, js, regexp]
 
 ### ref link:
 
-+ [正規表示式 | wikipedia](http://zh.wikipedia.org/zh-tw/正则表达式)
-+ [Regular Expressions | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
++ [正規表示式 \| wikipedia](http://zh.wikipedia.org/zh-tw/正则表达式)
++ [Regular Expressions \| MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
