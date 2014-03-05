@@ -245,6 +245,7 @@ $nav-border-color: #F75E5E; // rgba(red, .6)
     right: -100%;
     max-width: 90%;
     max-height: 90%;
+    overflow: hidden;
     transition: right .5s;
     box-shadow: 0 0 7px 3px #999;
     border-radius: 10px 0 0 10px;
