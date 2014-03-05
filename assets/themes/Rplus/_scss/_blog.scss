@@ -193,6 +193,7 @@ $nav-border-color: #F75E5E; // rgba(red, .6)
 
 
 .paginator {
+    @extend %cf;
     padding: 10px 0;
     margin: 3em 0em;
     border-top: 1px dashed #999;
@@ -210,6 +211,8 @@ $nav-border-color: #F75E5E; // rgba(red, .6)
 
     li {
         list-style-type: none;
+        width: 50%;
+        float: left;
     }
 }
     .paginator--next {
