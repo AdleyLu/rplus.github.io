@@ -9,6 +9,7 @@ tagline:
 web front-end developer
 
 + [github.com/Rplus](//github.com/Rplus)
++ [codepen.io/Rplus](//codepen.io/Rplus/public/)
 + [fb.me/rplus.tw](//fb.me/Rplus.tw)
 
-![Rplus personal icon](//rawgithub.com/Rplus/R-logo/v4/R+.svg "Rplus personal icon")
+![Rplus personal icon](//rawgithub.com/Rplus/R-logo/v6/R+.svg "Rplus personal icon")
