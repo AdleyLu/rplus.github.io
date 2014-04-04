@@ -15,6 +15,7 @@ kramdown:
 #
 title : Rplus Blog @ Github
 tagline: Rplus Blog @ Github, build by Jekyll Bootstrap
+thumb: //rawgithub.com/Rplus/R-logo/v6/R+.svg
 author :
   name : Rplus
   email : Rplus.tw@gmail.com
