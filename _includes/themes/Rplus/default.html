@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>{% if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}</title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    {% if page.tagline %}<meta name="description" content="{{ page.tagline }}">
+    {% else %}<meta name="description" content="{{ site.tagline }}" />
+    {% endif %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="{{ site.author.name }}">
     <meta name="homepage" content="{{ site.production_url }}" />
     <meta name="keyword" content="Rplus, blog, F2E" />
-    <meta name="description" content="{{ site.tagline }}" />
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
