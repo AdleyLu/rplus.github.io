@@ -46,6 +46,27 @@
 
     <link rel="alternate" type="application/atom+xml" title="Atom" href="{{ BASE_PATH }}/atom.xml">
     <meta name="google-site-verification" content="cmqlGhBITl594OKdvpknOY4CNEZvu-6c7ekWfU9r_QI" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+
+    <!-- Open Graph data -->
+    {% if page.tite %}
+    <meta property="og:title" content="{{ page.tite }}" />
+    {% else %}
+    <meta property="og:title" content="{{ site.tite }}" />
+    {% endif %}
+    {% if page.thumb %}
+    <meta property="og:image" content="{{ page.thumb }}" />
+    {% else %}
+    <meta property="og:image" content="{{ site.thumb }}" />
+    {% endif %}
+    {% if page.tagline %}<meta name="og:description" content="{{ page.tagline }}">
+    {% else %}<meta name="og:description" content="{{ site.tagline }}" />
+    {% endif %}
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ page.url }}" />
+
   </head>
 
   <body>
