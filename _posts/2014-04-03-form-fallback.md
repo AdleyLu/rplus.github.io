@@ -7,7 +7,7 @@ tags : [form, js, html5, fallback]
 ---
 {% include JB/setup %}
 
-表單的功能常出現在搜尋、註冊
+表單的功能常出現在搜尋、註冊  
 在現代人愈來愈懶的狀態下，  
 表單的功能其實也慢慢變多了起來
 
@@ -29,7 +29,8 @@ tags : [form, js, html5, fallback]
 + `[pattern]`: 支援 RegExp 的字串驗證，  
   可到 [HTML5Pattern](http://html5pattern.com/) 去參考別人整理的常用 RexExp pattern  
   驗證不過時，會彈出 title 上的文字來提醒 user.
-  > the value of the type attribute is text, search, tel, url or email
+
+    > the value of the type attribute is text, search, tel, url or email
 + `[placeholder]`: 預設提示字
 + `[list]`: map to the `id` of `<datalist>`
 
@@ -51,6 +52,15 @@ non-morden no-js 的 fallback 我基本上很想放生 XD
 </datalist>
 {% endhighlight %}
 
+> sample:  
+    <input list="data-list" id="search-kwd" name="search-kwd" required>
+    <datalist id="data-list">
+      <!--[if IE]><select id="search-kwd"><![endif]-->
+        <option label="XXX1" value="yyy1">
+        <option label="XXX2" value="yyy2">
+      <!--[if IE]></select><![endif]-->
+    </datalist>
+
 在有 js 情況下，再去調整你要的東西  
 (試過把 `<datalist>` 裡的 `option` 抽出來當 `ul > li > a` XD)
 
@@ -64,6 +74,11 @@ non-morden no-js 的 fallback 我基本上很想放生 XD
 還是更暴力地直接在 `input` 前後 用 `<!--[if !IE]><!-->` 包起來  
 或要更麻煩地去判斷版本 `<!--[if !(lt IE 10)]><!-->`  
 (其實也不用啦，IE 10 不理 `IE:CC` 了)
+
+`datalist` 有一點比較麻煩的就是:  
+它跟 `select` 一樣: `option` 沒有 `onclick` 事件...
+只有 `input event`, 或是 `propertychange`   
+為了這個我才把 `option` 改成 `a` 的邪惡 link 模式... XD
 
 大概這樣，  
 有想到啥再繼續補吧
