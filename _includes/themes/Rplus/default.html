@@ -81,6 +81,16 @@
         </h4>
         {% endif %}
 
+        <section>
+          <h4>Social Links</h4>
+          <ul class="sharing-list">
+            <li class="sharing__fb"><a href="//www.facebook.com/sharer/sharer.php?u={{ site.production_url }}{{ page.url }}" target="_blank">分享至 Facebook</a></li>
+            <li class="sharing__twitter"><a href="//twitter.com/intent/tweet?url={{ site.production_url }}{{ page.url }}&amp;text={{ page.title }}&amp;via={{ site.title }}" target="_blank">分享至 Twitter</a></li>
+            <li class="sharing__googleplus"><a href="//plus.google.com/u/0/share?url={{ site.production_url }}{{ page.url }}" target="_blank">分享至 Google plus</a></li>
+            <li class="sharing__rss"><a href="{{ BASE_PATH }}/atom.xml">RSS 訂閱</a></li>
+          </ul>
+        </section>
+
         {% if !page.categories %}
         <section>
         {% unless page.categories == empty %}
