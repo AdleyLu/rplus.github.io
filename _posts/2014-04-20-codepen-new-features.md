@@ -35,6 +35,12 @@ tags : [codepen, feature, design]
 
 + [view detail  & comments](http://blog.codepen.io/2014/02/18/view-details-comments-editor/)
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-post" data-href="https://www.facebook.com/rplus.tw/posts/701798696554583" data-width="466"><div class="fb-xfbml-parse-ignore">由 <a href="https://www.facebook.com/rplus.tw">Raven Chen</a> <a href="https://www.facebook.com/rplus.tw/posts/701798696554583">貼文</a>。</div></div>
+
+<noscript>
+<pre>
 > codepen 改版後多了一些功能  
 > 其中最喜歡的就是 collection 的功能了！！！
 >
@@ -61,6 +67,9 @@ tags : [codepen, feature, design]
 >
 > 兩者皆能讓站方更快速、準確地歸納這一則內容的關鍵字  
 > ----- <https://www.facebook.com/rplus.tw/posts/701798696554583>
+</pre>
+</noscript>
+
 
 
 ---
