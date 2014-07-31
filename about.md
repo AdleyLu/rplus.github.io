@@ -12,4 +12,4 @@ web front-end developer
 + [codepen.io/Rplus](//codepen.io/Rplus/public/)
 + [fb.me/rplus.tw](//fb.me/Rplus.tw)
 
-![Rplus personal icon](//rawgithub.com/Rplus/R-logo/v6/R+.svg "Rplus personal icon")
+![Rplus personal icon](//cdn.rawgit.com/Rplus/R-logo/v6/R+.svg "Rplus personal icon")
