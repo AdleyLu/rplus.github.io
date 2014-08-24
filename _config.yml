@@ -4,7 +4,7 @@ permalink: /blog/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "Gruntfile.js", "package.json", "node_modules"]
 # auto: true
-pygments: true
+highlighter: pygments
 markdown: kramdown
 
 kramdown:
