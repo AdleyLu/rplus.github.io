@@ -36,6 +36,14 @@ Github page 說明頁介紹得很清楚
     `jekyll server -w`  
     就可以開心預覽了 ( 理論上啦...
 
+### PS
+
+如果一直遇到 gem native extension ERROR  
+可以試試安裝 ruby-dev 或許可以解決 ERROR 的問題~
+
+> [[Ubuntu] ERROR: Failed to build gem native extension. /usr/bin/ruby1.9.1 extconf.rb](http://hire.chrisjlee.net/node/229)
+> `(sudo) apt-get install ruby-dev`
+
 ### ref:
 
 + github: <https://github.com/github/pages-gem>
