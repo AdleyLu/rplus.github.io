@@ -14,6 +14,11 @@ tags : [css, svg, font, icon, gulp, auto, f2e, action]
 
 #### using svg automaticly generate fonts by gulp-iconfont
 
+> + event: [『FED Party 12』一直玩！一直玩！一直玩！RWD Icon](https://www.facebook.com/events/764439036948839)
+> + time: 2014/09/25 20:00~20:20
+> + localtion: [CLBC T23](http://clbc.tw/portfolio/t23/)
+> + subject: [一直玩！一直玩！一直玩！RWD Icon](http://youmeb.kktix.cc/events/f2e12)
+
 這篇主要是要講如何使用 SVG 圖檔來生成 icon font，  
 並且要讓這 icon font 能順利在 CSS preprocessor tool 下接軌  
 
@@ -25,7 +30,7 @@ tags : [css, svg, font, icon, gulp, auto, f2e, action]
 先來稍微理解一下 font 的使用有哪些狀況要衡量
 
 網頁上採用 SVG 做為 RWD icon 的作法中  
-目前個人的認知是分為三類較為常見：
+以下是目前個人認為較為常見的三類：
 
 ### 1. **sprite SVG** background-image
 
@@ -63,7 +68,7 @@ SVG 背景圖可繼承 SVG 大多數的優點： 向量不失真，漸變超滑�
 > 印象中個人最早看到的例子是這個 <http://codepen.io/beyondSimple/details/stDzB>  
 > 也有人直接拿來畫 ATOM ( Github 出的 text editor ) 的 logo: <http://codepen.io/HipsterBrown/details/hjFIH>  
 > 都是利用 stroke style animation 來處理的，  
-> 其它也可以參看 [CREATING A BORDER ANIMATION EFFECT WITH SVG AND CSS@Codrops](http://tympanus.net/codrops/2014/02/26/creating-a-border-animation-effect-with-svg-and-css/)
+> 其它也可以參看 [Codrops SVG](http://tympanus.net/codrops/tag/svg/) 其中的一篇介紹文章 [Creating a Border Animation Effect with SVG and CSS](http://tympanus.net/codrops/2014/02/26/creating-a-border-animation-effect-with-svg-and-css/)
 
 
 ### 3. font (**svg2font**)
@@ -78,12 +83,13 @@ font 的好處就是蠢蛋如 IE 都看得懂 ( 雖然第一個也可以用 PNG 
 
 另外一點限制就是，  
 通常 font 的字碼都會從一些平常不會出現的字開始用，像是 `\e004` 之類的  
-所以大多情況下會用 CSS pseudo-element + content 來指定特殊字碼以呈現 iocn。
+所以大多情況下會用 CSS pseudo-element + content 來指定特殊字碼以呈現 icon。
 
-font 麻煩的點在於，除了 svg font 以外，其它格式 ( `ttf`, `woff`, `eot`)  丟進文字編輯器裡根本就是堆亂碼，  
-那麼看來就是要用另外的工具來生成 font...
+font 麻煩的點在於，  
+除了 svg font 以外，其它格式 ( `ttf`, `woff`, `eot`)  丟進文字編輯器裡根本就是堆亂碼，  
+這樣一來勢必要用另外的工具來生成 font 了...
 
-三種 RWD svg 大概就講到這，  
+三種 RWD svg 分類大概就到這，  
 以下開始聊聊怎麼來自動生成 font ~
 
 
@@ -91,7 +97,7 @@ font 麻煩的點在於，除了 svg font 以外，其它格式 ( `ttf`, `woff`,
 
 ### font generator tools:
 
-生成的工具可以使用相對較少設定的線上版，  
+font 生成的工具可以使用相對較少設定的線上版，  
 也可以使用 npm / rpm 上的工具來處理
 
 線上版的較有名的好像是下面兩家
@@ -113,22 +119,25 @@ font 麻煩的點在於，除了 svg font 以外，其它格式 ( `ttf`, `woff`,
 但是來來回回一直生就太麻煩了  
 於是找了個工具來幫忙處理這一塊
 
-目地是，自動將 SVG 生成 font，  
+目標是：自動將 SVG 生成 font，  
 並且生好想要用的 preprocessor 檔  
 ( 不管是 SASS、SCSS、LESS、stylus 都好，就是不要直接生 css 給我呀~~ )
 
 這邊介紹的工具是： [gulp-iconfont](https://www.npmjs.org/package/gulp-iconfont)  
-測試的個人 github repo： <https://github.com/Rplus/f2e-svg-lightning-talk>
+個人測試的 github repo： <https://github.com/Rplus/f2e-svg-lightning-talk>
 
-在開始生成 font 前，得先把 SVG 處理一番  
+但在開始生成 font 前，得先把 SVG 處理一番  
 這邊 demo 的 SVG 是從 http://responsivelogos.co.uk/ 抓下來 sprite SVG  
-處理 SVG 個人習慣使用 inkScape，這是款免費且跨平台的 SVG 好用軟體  
+處理 SVG 個人習慣使用 [inkScape](http://inkscape.org/)，這是款免費且跨平台的 SVG 好用軟體，  
+操作細節在此就不多提了 ( 是說也沒啥細節就了是...  
 將各 size 的圖檔分別存檔後，就能開始處理 font 生成了
 
 以最無腦的方式來說，  
 把 SVG 圖檔們擺到 `/app/font/svg/` 的目錄下，  
-接著開 terminal 下 gulp 就能看到各種 font 都生好在 `_publish/font/` 的資料夾裡了~
+接著開 terminal 下 `gulp` 就能看到各種 font 都生好在 `_publish/font/` 的資料夾裡了~  
+( 收工發便當
 
+設定部份~  
 如果要改字型名稱就去 `gulpfile.js` 裡找找 `fontName` 的設定值  
 另外還有 icon 要用的 class 也要在 `gulpfile.js` 裡設定好
 
@@ -137,7 +146,7 @@ font 麻煩的點在於，除了 svg font 以外，其它格式 ( `ttf`, `woff`,
 
 這裡 gulp-iconfont 有提供一個[指引](https://github.com/nfroidure/gulp-iconfont#make-your-css):
 在 font 生成後要去觸發將 font charcode 做一個 參照頁來用  
-這部份我的處理是給定一支將要被編成 `.styl` 的模版檔 `_font.styl-temp`  
+這部份我的處理是給定一支將要被編成 `.styl` 的模版檔 [`_font.styl-temp`](https://github.com/Rplus/f2e-svg-lightning-talk/blob/master/app/style/_font.styl-temp)  
 裡頭就是一堆變數字串，到時後會被自動改成對應的文字
 
 所以這邊就看客倌要生成什麼了~ 其實也可以生成 SCSS、LESS 之類的~  
@@ -147,6 +156,7 @@ font 麻煩的點在於，除了 svg font 以外，其它格式 ( `ttf`, `woff`,
 在 demo project 裡的使用方式是以檔名作為 mixin 的參數，  
 最後 CSS 生成就會出現指定的字型字碼
 
+PS:  
 IconMoon 有一點很好用的是，它可以指定特定字碼給某個 icon  
 目前是還沒在 gulp-iconfont 上找到類似的設定  
 
@@ -176,8 +186,8 @@ ex:
 在 media-query 切換 `font-weight` / `font-style`  
 這種方式是有不同的 font-name 或是指定不同的 font-face
 
-> PS： 如果是不同的字型檔，在 media-query 條件切換過程中，
-> 因會需要載入相應的字型檔，所以 icon 位置會有閃動的狀況唷~
+> PS： 如果是不同的字型檔，在 media-query 條件切換過程中，  
+> 因會需要載入相應的字型檔，所以 icon 位置會有閃動的狀況唷~  
 > 就跟 不是用 sprite 的方式來處理 `:hover` 切換背景圖一樣的意思~
 
 
@@ -202,7 +212,7 @@ icon font 很方便，
 svg sprite + png fallback 或許會更適合也說不定~
 
 這種東西反正就玩玩嘛~  
-放輕鬆~
+輕鬆點~
 
 
 
