@@ -254,6 +254,10 @@ $nav-border-color: #F75E5E; // rgba(red, .6)
     border-radius: 10px 0 0 10px;
     background-color: #fff;
 
+    &:hover {
+        overflow: auto;
+    }
+
     @include atbp {
         position: static;
         overflow: hidden;
