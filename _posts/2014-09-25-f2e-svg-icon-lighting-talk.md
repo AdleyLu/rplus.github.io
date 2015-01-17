@@ -18,6 +18,9 @@ tags : [css, svg, font, icon, gulp, auto, f2e, action]
 > + time: 2014/09/25 20:00~20:20
 > + localtion: [CLBC T23](http://clbc.tw/portfolio/t23/)
 > + subject: [一直玩！一直玩！一直玩！RWD Icon](http://youmeb.kktix.cc/events/f2e12)
+> + offical record: [[2014/09/25]『FED Party 12』一直玩！一直玩！一直玩！RWD Icon](http://www.f2e.tw/2014/12/20140925fed-party-12rwd-icon.html)
+> + youtube record: [Front-End Developers Taiwan Party 12 - 閃電講1](https://www.youtube.com/watch?v=y70Dhas6T18&list=PLmP3eZx_aWyq-r9su-QQg-mFGlYi-BESJ)
+> + gist note / slide: [伸縮自在的愛](https://gist.github.com/Rplus/f23c8d15e2eb7677b521)
 
 這篇主要是要講如何使用 SVG 圖檔來生成 icon font，  
 並且要讓這 icon font 能順利在 CSS preprocessor tool 下接軌  
